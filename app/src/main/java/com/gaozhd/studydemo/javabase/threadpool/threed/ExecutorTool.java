@@ -1,8 +1,8 @@
 
 /*******************************************************************************
  * Copyright (c) 2011-3011 天坦软件
- *
- *  author Gao Zhidong <gaozhidong@tiantanhehe.com>
+ * <p/>
+ * author Gao Zhidong <gaozhidong@tiantanhehe.com>
  ******************************************************************************/
 
 package com.gaozhd.studydemo.javabase.threadpool.threed;
@@ -40,10 +40,11 @@ public class ExecutorTool {
      */
     public static ExecutorTool getInstance() {
 
-        if (tool == null) {
-            tool = new ExecutorTool();
-        }
-        return tool;
+//        if (tool == null) {
+//            tool = new ExecutorTool();
+//        }
+//        return tool;
+        return SingletonHolder.tool;
     }
 
     /**
@@ -54,5 +55,9 @@ public class ExecutorTool {
      */
     public void execute(Executor e) {
         executorService.execute(e);
+    }
+
+    private static class SingletonHolder {
+        private static final ExecutorTool tool = new ExecutorTool();
     }
 }
