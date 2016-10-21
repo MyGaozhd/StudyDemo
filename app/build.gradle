@@ -1,0 +1,56 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.gaozhd.studydemo"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+//    defaultConfig {
+//        // Enabling multidex support.
+//        multiDexEnabled true
+//    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:recyclerview-v7:23.2.1'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'io.reactivex:rxjava:1.1.6'
+    compile 'com.jakewharton:butterknife:8.1.0'
+    apt 'com.jakewharton:butterknife-compiler:8.1.0'
+    compile 'org.greenrobot:greendao:3.1.1'
+}
+
+/**
+ * GreenDao配置
+ * schemaVersion 当前数据库结构的版本。结构版本变化时在OpenHelpers中被使用到。当你改变实体或者数据的结构时，这个值应该增加。
+ * daoPackage 生成的DAO，DaoMaster和DaoSession的包名。默认是实体的包名。
+ * targetGenDir 生成源文件的路径。默认源文件目录是在build目录中的(build/generated/source/greendao)。
+ * generateTests 设置是否自动生成单元测试。
+ * targetGenDirTest 生成的单元测试的根目录。
+ */
+greendao {
+//    schemaVersion 1
+    daoPackage 'com.gaozhd.studydemo.androidbase.greendao.dao'
+    targetGenDir 'src/main/java'
+}

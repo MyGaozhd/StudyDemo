@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gaozhd.studydemo">
+
+    <application
+        android:name=".GlobalInfoApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name="com.gaozhd.studydemo.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.gaozhd.studydemo.activity.Activity0" />
+        <activity android:name="com.gaozhd.studydemo.activity.Activity0_item1" />
+        <activity android:name="com.gaozhd.studydemo.activity.Activity1" />
+        <activity android:name="com.gaozhd.studydemo.activity.Activity1_item1" />
+        <activity android:name="com.gaozhd.studydemo.activity.Activity1_item2" />
+        <activity android:name="com.gaozhd.studydemo.activity.Activity2" />
+        <activity android:name="com.gaozhd.studydemo.activity.Activity3" />
+        <activity android:name="com.gaozhd.studydemo.activity.Activity4" />
+        <activity android:name="com.gaozhd.studydemo.activity.Activity5" />
+
+        <!--设计模式-->
+        <activity android:name=".designpattern.DesignPatternActivity" />
+        <activity android:name=".designpattern.observer.ObserverActivity" />
+        <activity android:name=".designpattern.proxy.ProxyActivity" />
+        <activity android:name=".designpattern.decorator.DecoratorActivity" />
+        <!--java基础-->
+        <activity android:name=".javabase.JavaBaseActivity" />
+        <activity android:name=".javabase.threadpool.ThreedPoolActivity" />
+        <!--android基础-->
+        <activity android:name=".androidbase.AndroidBaseActivity" />
+        <activity android:name=".androidbase.recyclerview.RecyclerViewActivity0" />
+        <activity android:name=".androidbase.mvvm.MvvmActivity" />
+        <activity android:name=".androidbase.rxjava.RxJavaActivity" />
+        <!--广播注册-->
+        <receiver android:name=".broadcast.Broadcast0" />
+    </application>
+</manifest>
