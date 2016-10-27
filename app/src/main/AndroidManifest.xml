@@ -45,6 +45,10 @@
         <activity android:name=".androidbase.recyclerview.RecyclerViewActivity0" />
         <activity android:name=".androidbase.mvvm.MvvmActivity" />
         <activity android:name=".androidbase.rxjava.RxJavaActivity" />
+        <activity android:name=".androidbase.widget.WidgetActivity" />
+        <!--自定义控件-->
+        <activity android:name=".androidbase.widget.testview.TestViewActivity" />
+
         <!--广播注册-->
         <receiver android:name=".broadcast.Broadcast0" />
     </application>

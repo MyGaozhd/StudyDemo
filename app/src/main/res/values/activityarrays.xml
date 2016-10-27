@@ -53,6 +53,8 @@
         <item>Mvp框架模式</item>
         <!-- 3 RxJava -->
         <item>RxJava</item>
+        <!-- 4 自定义控件 -->
+        <item>自定义控件</item>
     </string-array>
 
     <!-- 所有的Broadcast -->
@@ -69,6 +71,13 @@
         <item>皮肤文件保存在assets文件夹中</item>
         <!-- 1 通过广播方式更换皮肤 -->
         <item>通过广播方式更换皮肤</item>
+    </string-array>
+
+    <!-- 自定义控件 -->
+    <string-array name="allwidget">
+
+        <!-- 0 testView -->
+        <item>TestView</item>
     </string-array>
 
 </resources>

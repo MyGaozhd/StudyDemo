@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.Application;
 import android.content.SharedPreferences;
 
+import com.gaozhd.studydemo.androidbase.crash.BaseCrashHandler;
+import com.gaozhd.studydemo.androidbase.crash.RebootThreadExceptionHandler;
 import com.gaozhd.studydemo.androidbase.greendao.DBManager;
 import com.gaozhd.studydemo.androidbase.greendao.DataBaseHelper;
 
@@ -37,6 +39,12 @@ public class GlobalInfoApplication extends Application {
     public void onCreate() {
         super.onCreate();
         appInstance = this;
+
+        // 异常处理
+        BaseCrashHandler handler = BaseCrashHandler.getInstance();
+        handler.init(this);
+        // 程序异常关闭1s之后重新启动
+        new RebootThreadExceptionHandler(getBaseContext());
 
         // 初始化数据库
         DBManager.getInstance(this);

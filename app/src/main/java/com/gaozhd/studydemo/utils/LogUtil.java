@@ -11,7 +11,7 @@ import android.util.Log;
 public class LogUtil {
     private static final String TAG = "gaozhd";
 
-    public static void log(String text) {
-        Log.d(TAG, text);
+    public static void log(Object text) {
+        Log.d(TAG, text.toString());
     }
 }

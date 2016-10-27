@@ -13,6 +13,8 @@ import com.gaozhd.studydemo.androidbase.AndroidBaseActivity;
 import com.gaozhd.studydemo.designpattern.DesignPatternActivity;
 import com.gaozhd.studydemo.javabase.JavaBaseActivity;
 
+import java.util.List;
+
 public class MainActivity extends BaseActivity {
 
     private ListView lvMain;

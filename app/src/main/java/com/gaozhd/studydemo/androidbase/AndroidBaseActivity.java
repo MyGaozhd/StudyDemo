@@ -13,6 +13,7 @@ import com.gaozhd.studydemo.activity.BaseActivity;
 import com.gaozhd.studydemo.androidbase.mvvm.MvvmActivity;
 import com.gaozhd.studydemo.androidbase.recyclerview.RecyclerViewActivity0;
 import com.gaozhd.studydemo.androidbase.rxjava.RxJavaActivity;
+import com.gaozhd.studydemo.androidbase.widget.WidgetActivity;
 
 public class AndroidBaseActivity extends BaseActivity {
 
@@ -57,6 +58,10 @@ public class AndroidBaseActivity extends BaseActivity {
                         break;
                     case 3:
                         intent.setClass(AndroidBaseActivity.this, RxJavaActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 4:
+                        intent.setClass(AndroidBaseActivity.this, WidgetActivity.class);
                         startActivity(intent);
                         break;
                     default:
