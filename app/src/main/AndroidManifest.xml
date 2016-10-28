@@ -48,6 +48,7 @@
         <activity android:name=".androidbase.widget.WidgetActivity" />
         <!--自定义控件-->
         <activity android:name=".androidbase.widget.testview.TestViewActivity" />
+        <activity android:name=".androidbase.widget.studyview.StudyViewActivity" />
 
         <!--广播注册-->
         <receiver android:name=".broadcast.Broadcast0" />

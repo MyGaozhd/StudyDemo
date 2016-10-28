@@ -3,6 +3,7 @@
 
     <!-- 所有的Activity -->
     <string-array name="allActivity">
+
         <!-- 0 Broadcast -->
         <item>Broadcast Reseiver</item>
         <!-- 1 切换皮肤 -->
@@ -79,6 +80,8 @@
 
         <!-- 0 testView -->
         <item>TestView</item>
+        <!-- 1 studyview -->
+        <item>StudyView</item>
     </string-array>
 
 </resources>
