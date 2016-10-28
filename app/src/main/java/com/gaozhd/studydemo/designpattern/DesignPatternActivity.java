@@ -10,60 +10,32 @@ import android.widget.ListView;
 
 import com.gaozhd.studydemo.R;
 import com.gaozhd.studydemo.activity.BaseActivity;
+import com.gaozhd.studydemo.activity.ShowListActivity;
 import com.gaozhd.studydemo.designpattern.decorator.DecoratorActivity;
 import com.gaozhd.studydemo.designpattern.observer.ObserverActivity;
 import com.gaozhd.studydemo.designpattern.proxy.ProxyActivity;
 
-public class DesignPatternActivity extends BaseActivity {
-
-    private ListView lvMain;
-    private String[] allActivity;
-    private ArrayAdapter<String> adapter;
-
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        init();
-        setlvMainListener();
-
+public class DesignPatternActivity extends ShowListActivity {
+    @Override
+    public int getResID() {
+        return R.array.allDesign;
     }
 
-    private void init() {
-        lvMain = (ListView) findViewById(R.id.lvMain);
-        allActivity = getResources().getStringArray(R.array.allDesign);
-        adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, allActivity);
-
-        lvMain.setAdapter(adapter);
+    @Override
+    public void itemClick(Intent intent, View view, int position) {
+        switch (position) {
+            case 0:
+                intent.setClass(DesignPatternActivity.this, ObserverActivity.class);
+                break;
+            case 1:
+                intent.setClass(DesignPatternActivity.this, ProxyActivity.class);
+                break;
+            case 2:
+                intent.setClass(DesignPatternActivity.this, DecoratorActivity.class);
+                break;
+            default:
+                break;
+        }
     }
-
-    private void setlvMainListener() {
-        // registerForContextMenu(lvMain);
-        lvMain.setOnItemClickListener(new OnItemClickListener() {
-
-            Intent intent = new Intent();
-
-            public void onItemClick(AdapterView<?> arg0, View view,
-                                    int position, long id) {
-                switch (position) {
-                    case 0:
-                        intent.setClass(DesignPatternActivity.this, ObserverActivity.class);
-                        startActivity(intent);
-                        break;
-                    case 1:
-                        intent.setClass(DesignPatternActivity.this, ProxyActivity.class);
-                        startActivity(intent);
-                        break;
-                    case 2:
-                        intent.setClass(DesignPatternActivity.this, DecoratorActivity.class);
-                        startActivity(intent);
-                        break;
-                    default:
-                        break;
-                }
-            }
-        });
-    }
-
 }
+

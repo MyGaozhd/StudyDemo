@@ -1,3 +1,4 @@
+
 package com.gaozhd.studydemo.androidbase.crash;
 
 import android.app.AlarmManager;
@@ -40,7 +41,7 @@ public class RebootThreadExceptionHandler implements UncaughtExceptionHandler {
                 @Override
                 public void run() {
                     Looper.prepare();
-                    Toast.makeText(context, "很抱歉程序异常", Toast.LENGTH_SHORT)
+                    Toast.makeText(context, hintText, Toast.LENGTH_SHORT)
                             .show();
                     Looper.loop();
                 }
