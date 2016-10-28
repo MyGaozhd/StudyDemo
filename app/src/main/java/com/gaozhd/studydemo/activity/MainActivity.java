@@ -84,6 +84,11 @@ public class MainActivity extends BaseActivity {
                         intent.setClass(MainActivity.this, AndroidBaseActivity.class);
                         startActivity(intent);
                         break;
+                    case 9:
+                        String s = null;
+                        if (s.equals("aaa"))
+                            return;
+                        break;
                     default:
                         break;
                 }

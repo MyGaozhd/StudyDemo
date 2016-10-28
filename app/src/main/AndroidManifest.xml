@@ -51,5 +51,8 @@
 
         <!--广播注册-->
         <receiver android:name=".broadcast.Broadcast0" />
+        <!-- 注册自定义静态广播接收器 开机启动工具类需要此配置 -->
+        <receiver android:name="com.gaozhd.studydemo.androidbase.crash.StartAppReceiver" />
+
     </application>
 </manifest>

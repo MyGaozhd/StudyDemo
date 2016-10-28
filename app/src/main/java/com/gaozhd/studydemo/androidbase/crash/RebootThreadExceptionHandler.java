@@ -15,29 +15,32 @@ import java.util.GregorianCalendar;
 public class RebootThreadExceptionHandler implements UncaughtExceptionHandler {
 
     private Context context;
-    private String hintText;
+    private String hintText = "很抱歉，程序异常，即将重启！";
+    private static RebootThreadExceptionHandler INSTANCE = null;
 
-    public RebootThreadExceptionHandler(Context context, String hintText) {
-        this.context = context;
-        this.hintText = hintText;
-        Thread.setDefaultUncaughtExceptionHandler(this);
+    public static RebootThreadExceptionHandler getInstance(Context context) {
+        if (INSTANCE == null) {
+            INSTANCE = new RebootThreadExceptionHandler(context);
+        }
+        return INSTANCE;
     }
 
-    public RebootThreadExceptionHandler(Context context) {
-        this(context, null);
+    private RebootThreadExceptionHandler(Context context) {
+        this.context = context;
+        Thread.setDefaultUncaughtExceptionHandler(this);
     }
 
     @Override
     public void uncaughtException(Thread thread, Throwable ex) {
         ex.printStackTrace();// 输出异常信息到控制台
 
-        if (TextUtils.isEmpty(hintText)) {
+        if (true) {
             /* 启动新线程提示程序异常 */
             new Thread(new Runnable() {
                 @Override
                 public void run() {
                     Looper.prepare();
-                    Toast.makeText(context, hintText, Toast.LENGTH_SHORT)
+                    Toast.makeText(context, "很抱歉程序异常", Toast.LENGTH_SHORT)
                             .show();
                     Looper.loop();
                 }

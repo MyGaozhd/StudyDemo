@@ -3,7 +3,6 @@
 
     <!-- 所有的Activity -->
     <string-array name="allActivity">
-
         <!-- 0 Broadcast -->
         <item>Broadcast Reseiver</item>
         <!-- 1 切换皮肤 -->
@@ -20,8 +19,10 @@
         <item>常用设计模式</item>
         <!-- 7 java基础 -->
         <item>java基础</item>
-        <!-- 8 java基础 -->
+        <!-- 8 android基础 -->
         <item>Android基础</item>
+        <!-- 9 程序崩溃自动重启 -->
+        <item>程序崩溃自动重启</item>
     </string-array>
 
     <!-- 所有的Activity -->
