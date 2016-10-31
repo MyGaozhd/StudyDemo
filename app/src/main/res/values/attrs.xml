@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TestView">
+        <!--文字大小-->
+        <attr name="textSize" format="dimension" />
+        <!--文字内容-->
+        <attr name="textContent" format="string" />
+        <!--文字颜色-->
+        <attr name="textColor" format="color" />
+        <!--背景颜色-->
+        <attr name="backColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="StudyView">
+        <attr name="studyview_backColor" format="color"></attr>
+    </declare-styleable>
+</resources>
