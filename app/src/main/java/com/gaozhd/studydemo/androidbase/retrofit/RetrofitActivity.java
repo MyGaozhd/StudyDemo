@@ -6,8 +6,6 @@ import android.widget.TextView;
 
 import com.gaozhd.studydemo.R;
 import com.gaozhd.studydemo.activity.BaseActivity;
-import com.gaozhd.studydemo.utils.LogUtil;
-import com.gaozhd.studydemo.utils.ThreedUtil;
 
 import java.io.IOException;
 
@@ -41,22 +39,6 @@ public class RetrofitActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_retrofit1);
         ButterKnife.bind(this);
-    }
-
-    @OnClick({R.id.getModel, R.id.getResponse})
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.getModel:
-                getMovieReModel();
-                break;
-            case R.id.getResponse:
-                getMovieReResponse();
-                break;
-            case R.id.postModel:
-                break;
-            case R.id.postResponse:
-                break;
-        }
     }
 
     /**
@@ -135,5 +117,17 @@ public class RetrofitActivity extends BaseActivity {
                 tv_data.setText(movie.getTitle());
             }
         });
+    }
+
+    @OnClick({R.id.getCallBack, R.id.getRxjava})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.getCallBack:
+                getMovieReModel();
+                break;
+            case R.id.getRxjava:
+                getMovieReResponse();
+                break;
+        }
     }
 }
