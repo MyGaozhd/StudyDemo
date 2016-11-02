@@ -41,6 +41,18 @@ public class RetrofitActivity extends BaseActivity {
         ButterKnife.bind(this);
     }
 
+//    @OnClick({R.id.getModel, R.id.getResponse})
+//    public void onClick(View view) {
+//        switch (view.getId()) {
+//            case R.id.getModel:
+//                getMovieReModel();
+//                break;
+//            case R.id.getResponse:
+//                getMovieReResponse();
+//                break;
+//        }
+//    }
+
     /**
      * @Title: getMovieReModel
      * @Description: Retrofit 异步方法获取数据

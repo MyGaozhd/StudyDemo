@@ -56,6 +56,7 @@
         <activity android:name=".androidbase.rxjava.RxJavaActivity" />
         <activity android:name=".androidbase.widget.WidgetActivity" />
         <activity android:name=".androidbase.retrofit.RetrofitActivity" />
+        <activity android:name=".androidbase.oom.OOMActivity" />
         <!--自定义控件-->
         <activity android:name=".androidbase.widget.testview.TestViewActivity" />
         <activity android:name=".androidbase.widget.studyview.StudyViewActivity" />

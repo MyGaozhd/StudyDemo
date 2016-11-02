@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import com.gaozhd.studydemo.androidbase.crash.RebootThreadExceptionHandler;
 import com.gaozhd.studydemo.androidbase.greendao.DBManager;
 import com.gaozhd.studydemo.androidbase.greendao.DataBaseHelper;
+import com.squareup.leakcanary.LeakCanary;
 
 /**
  * @author Gao ZhiDong <gaozhidong@tiantanhehe.com>
@@ -38,6 +39,12 @@ public class GlobalInfoApplication extends Application {
     public void onCreate() {
         super.onCreate();
         appInstance = this;
+
+        //leakcanary初始化
+        if (LeakCanary.isInAnalyzerProcess(this)) {
+            return;
+        }
+        LeakCanary.install(this);
 
         // 程序异常关闭1s之后重新启动
         RebootThreadExceptionHandler.getInstance(getBaseContext());
