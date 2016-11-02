@@ -2,10 +2,12 @@ package com.gaozhd.studydemo.androidbase;
 
 import android.content.Intent;
 import android.view.View;
+
 import com.gaozhd.studydemo.R;
 import com.gaozhd.studydemo.activity.ShowListActivity;
 import com.gaozhd.studydemo.androidbase.mvvm.MvvmActivity;
 import com.gaozhd.studydemo.androidbase.recyclerview.RecyclerViewActivity0;
+import com.gaozhd.studydemo.androidbase.retrofit.RetrofitActivity;
 import com.gaozhd.studydemo.androidbase.rxjava.RxJavaActivity;
 import com.gaozhd.studydemo.androidbase.widget.WidgetActivity;
 
@@ -30,6 +32,9 @@ public class AndroidBaseActivity extends ShowListActivity {
                 break;
             case 4:
                 intent.setClass(AndroidBaseActivity.this, WidgetActivity.class);
+                break;
+            case 5:
+                intent.setClass(AndroidBaseActivity.this, RetrofitActivity.class);
                 break;
             default:
                 break;

@@ -2,6 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.gaozhd.studydemo">
 
+    <!-- 网络相关 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
     <application
         android:name=".GlobalInfoApplication"
         android:allowBackup="true"
@@ -46,6 +55,7 @@
         <activity android:name=".androidbase.mvvm.MvvmActivity" />
         <activity android:name=".androidbase.rxjava.RxJavaActivity" />
         <activity android:name=".androidbase.widget.WidgetActivity" />
+        <activity android:name=".androidbase.retrofit.RetrofitActivity" />
         <!--自定义控件-->
         <activity android:name=".androidbase.widget.testview.TestViewActivity" />
         <activity android:name=".androidbase.widget.studyview.StudyViewActivity" />
