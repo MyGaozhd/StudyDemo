@@ -5,6 +5,7 @@ import android.view.View;
 
 import com.gaozhd.studydemo.R;
 import com.gaozhd.studydemo.activity.ShowListActivity;
+import com.gaozhd.studydemo.androidbase.lifecycle.activity.LifeCycleActivity1;
 import com.gaozhd.studydemo.androidbase.mvvm.MvvmActivity;
 import com.gaozhd.studydemo.androidbase.oom.OOMActivity;
 import com.gaozhd.studydemo.androidbase.recyclerview.RecyclerViewActivity0;
@@ -39,6 +40,9 @@ public class AndroidBaseActivity extends ShowListActivity {
                 break;
             case 6:
                 intent.setClass(AndroidBaseActivity.this, OOMActivity.class);
+                break;
+            case 7:
+                intent.setClass(AndroidBaseActivity.this, LifeCycleActivity1.class);
                 break;
             default:
                 break;

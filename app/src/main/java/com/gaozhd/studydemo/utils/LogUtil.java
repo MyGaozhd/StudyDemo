@@ -12,6 +12,6 @@ public class LogUtil {
     private static final String TAG = "gaozhd";
 
     public static void log(Object text) {
-        Log.d(TAG, text.toString());
+        Log.e(TAG, text.toString());
     }
 }

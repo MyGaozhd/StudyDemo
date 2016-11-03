@@ -57,6 +57,29 @@
         <activity android:name=".androidbase.widget.WidgetActivity" />
         <activity android:name=".androidbase.retrofit.RetrofitActivity" />
         <activity android:name=".androidbase.oom.OOMActivity" />
+        <!--标准
+        <activity
+            android:name=".androidbase.lifecycle.activity.LifeCycleActivity1"/>
+        <activity
+            android:name=".androidbase.lifecycle.activity.LifeCycleActivity2"/>
+        <activity
+            android:name=".androidbase.lifecycle.activity.LifeCycleActivity3"/>
+        <activity
+            android:name=".androidbase.lifecycle.activity.LifeCycleActivity4" />-->
+
+        <activity
+            android:name=".androidbase.lifecycle.activity.LifeCycleActivity1"
+            android:launchMode="standard" />
+        <activity
+            android:name=".androidbase.lifecycle.activity.LifeCycleActivity2"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".androidbase.lifecycle.activity.LifeCycleActivity3"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".androidbase.lifecycle.activity.LifeCycleActivity4"
+            android:launchMode="singleTop" />
+
         <!--自定义控件-->
         <activity android:name=".androidbase.widget.testview.TestViewActivity" />
         <activity android:name=".androidbase.widget.studyview.StudyViewActivity" />

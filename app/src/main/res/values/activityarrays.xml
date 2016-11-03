@@ -61,6 +61,8 @@
         <item>Retrofit网络请求框架</item>
         <!-- 6 常见的内存溢出及解决办法 -->
         <item>常见的内存溢出及解决办法</item>
+        <!-- 7 Activity的生命周期 -->
+        <item>Activity的生命周期</item>
     </string-array>
 
     <!-- 所有的Broadcast -->
