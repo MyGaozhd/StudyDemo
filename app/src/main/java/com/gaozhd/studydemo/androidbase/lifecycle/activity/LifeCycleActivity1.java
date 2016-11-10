@@ -32,17 +32,32 @@ public class LifeCycleActivity1 extends BaseActivity {
         setContentView(R.layout.layout_lifycycle_activity0);
         ButterKnife.bind(this);
         tv.setBackgroundColor(Color.parseColor("#ff0000"));
+        LogUtil.log(tv.getText().toString());
         tv.setText("1");
+
+//        new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                tv.setText("1");
+//                LogUtil.log(tv.getText().toString());
+//            }
+//        }).start();
+////        tv.setText("1");
+//        tv.setText("Activity :1" + " \nClassID:" + this.toString() + " \nTaskID:" + this.getTaskId());
     }
 
     @Override
     protected void onRestart() {
+
         LogUtil.log("LifeCycleActivity1: " + "onRestart");
         super.onRestart();
     }
 
     @Override
     protected void onStart() {
+
+
+
         LogUtil.log("LifeCycleActivity1: " + "onStart");
         super.onStart();
     }
@@ -50,6 +65,7 @@ public class LifeCycleActivity1 extends BaseActivity {
     @Override
     protected void onResume() {
         LogUtil.log("LifeCycleActivity1: " + "onResume");
+        LogUtil.log("Activity :1" + " \nClassID:" + this.toString() + " \nTaskID:" + this.getTaskId());
         super.onResume();
     }
 
@@ -69,6 +85,12 @@ public class LifeCycleActivity1 extends BaseActivity {
     protected void onDestroy() {
         LogUtil.log("LifeCycleActivity1: " + "onDestroy");
         super.onDestroy();
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        LogUtil.log("LifeCycleActivity1: " + "onNewIntent");
+        super.onNewIntent(intent);
     }
 
     @OnClick({R.id.btn1, R.id.btn2, R.id.btn3, R.id.btn4})

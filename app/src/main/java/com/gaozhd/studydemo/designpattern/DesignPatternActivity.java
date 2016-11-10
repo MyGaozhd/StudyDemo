@@ -11,6 +11,7 @@ import android.widget.ListView;
 import com.gaozhd.studydemo.R;
 import com.gaozhd.studydemo.activity.BaseActivity;
 import com.gaozhd.studydemo.activity.ShowListActivity;
+import com.gaozhd.studydemo.designpattern.cloneable.CloneActivity;
 import com.gaozhd.studydemo.designpattern.decorator.DecoratorActivity;
 import com.gaozhd.studydemo.designpattern.observer.ObserverActivity;
 import com.gaozhd.studydemo.designpattern.proxy.ProxyActivity;
@@ -32,6 +33,9 @@ public class DesignPatternActivity extends ShowListActivity {
                 break;
             case 2:
                 intent.setClass(DesignPatternActivity.this, DecoratorActivity.class);
+                break;
+            case 3:
+                intent.setClass(DesignPatternActivity.this, CloneActivity.class);
                 break;
             default:
                 break;

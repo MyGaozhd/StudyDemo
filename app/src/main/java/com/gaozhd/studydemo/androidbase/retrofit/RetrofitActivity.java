@@ -6,6 +6,9 @@ import android.widget.TextView;
 
 import com.gaozhd.studydemo.R;
 import com.gaozhd.studydemo.activity.BaseActivity;
+import com.gaozhd.studydemo.androidbase.rxjava.RxManager;
+import com.gaozhd.studydemo.androidbase.rxjava.RxObservable;
+import com.gaozhd.studydemo.androidbase.rxjava.RxSubscriber;
 
 import java.io.IOException;
 
@@ -90,10 +93,9 @@ public class RetrofitActivity extends BaseActivity {
      * @date 2016/11/2 14:04
      */
     private void getMovieReResponse() {
-        Observable<Movie> ob = Observable.create(new Observable.OnSubscribe<Movie>() {
+        RxManager.getInstance().addSubscribe("k", new RxObservable.RxCall<Movie>() {
             @Override
-            public void call(Subscriber<? super Movie> subscriber) {
-
+            public Movie call() {
                 String baseUrl = "https://api.douban.com/v2/movie/";
 
                 //创建一个Retrofit 对象
@@ -105,30 +107,58 @@ public class RetrofitActivity extends BaseActivity {
                 MovieService movieService = retrofit.create(MovieService.class);
                 Call<Movie> call = movieService.getMove(0, 10);
                 try {
-                    Movie m = call.execute().body();
-                    subscriber.onNext(m);
+                    return call.execute().body();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+                return null;
+            }
+        }, new RxSubscriber.RxNext<Movie>() {
+            @Override
+            public void doNext(Movie data) {
+                tv_data.setText(data.getTitle());
             }
         });
 
-        ob.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(new Subscriber<Movie>() {
-            @Override
-            public void onCompleted() {
-
-            }
-
-            @Override
-            public void onError(Throwable e) {
-
-            }
-
-            @Override
-            public void onNext(Movie movie) {
-                tv_data.setText(movie.getTitle());
-            }
-        });
+//        Observable<Movie> ob = Observable.create(new Observable.OnSubscribe<Movie>() {
+//            @Override
+//            public void call(Subscriber<? super Movie> subscriber) {
+//
+//                String baseUrl = "https://api.douban.com/v2/movie/";
+//
+//                //创建一个Retrofit 对象
+//                Retrofit retrofit = new Retrofit.Builder()
+//                        .baseUrl(baseUrl)
+//                        .addConverterFactory(GsonConverterFactory.create())
+//                        .build();
+//
+//                MovieService movieService = retrofit.create(MovieService.class);
+//                Call<Movie> call = movieService.getMove(0, 10);
+//                try {
+//                    Movie m = call.execute().body();
+//                    subscriber.onNext(m);
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        });
+//
+//        ob.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(new Subscriber<Movie>() {
+//            @Override
+//            public void onCompleted() {
+//
+//            }
+//
+//            @Override
+//            public void onError(Throwable e) {
+//
+//            }
+//
+//            @Override
+//            public void onNext(Movie movie) {
+//                tv_data.setText(movie.getTitle());
+//            }
+//        });
     }
 
     @OnClick({R.id.getCallBack, R.id.getRxjava})

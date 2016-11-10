@@ -35,6 +35,8 @@
         <item>Proxy 代理模式</item>
         <!-- 2 装饰模式 -->
         <item>Decorator 装饰模式</item>
+        <!-- 3 原型模式 -->
+        <item>Cloneable 原型模式</item>
     </string-array>
 
     <!-- 所有的Activity -->

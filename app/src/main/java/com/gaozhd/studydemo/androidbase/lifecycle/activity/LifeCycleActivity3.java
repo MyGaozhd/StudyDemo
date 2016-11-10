@@ -33,6 +33,7 @@ public class LifeCycleActivity3 extends BaseActivity {
         ButterKnife.bind(this);
         tv.setBackgroundColor(Color.parseColor("#0000ff"));
         tv.setText("3");
+        tv.setText("Activity :3" + " \nClassID:" + this.toString() + " \nTaskID:" + this.getTaskId());
     }
 
     @Override
@@ -50,6 +51,7 @@ public class LifeCycleActivity3 extends BaseActivity {
     @Override
     protected void onResume() {
         LogUtil.log("LifeCycleActivity3: " + "onResume");
+        LogUtil.log("Activity :3" + " \nClassID:" + this.toString() + " \nTaskID:" + this.getTaskId());
         super.onResume();
     }
 
@@ -69,6 +71,12 @@ public class LifeCycleActivity3 extends BaseActivity {
     protected void onDestroy() {
         LogUtil.log("LifeCycleActivity3: " + "onDestroy");
         super.onDestroy();
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        LogUtil.log("LifeCycleActivity3: " + "onNewIntent");
+        super.onNewIntent(intent);
     }
 
     @OnClick({R.id.btn1, R.id.btn2, R.id.btn3, R.id.btn4})

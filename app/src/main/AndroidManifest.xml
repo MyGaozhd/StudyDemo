@@ -46,6 +46,7 @@
         <activity android:name=".designpattern.observer.ObserverActivity" />
         <activity android:name=".designpattern.proxy.ProxyActivity" />
         <activity android:name=".designpattern.decorator.DecoratorActivity" />
+        <activity android:name=".designpattern.cloneable.CloneActivity" />
         <!--java基础-->
         <activity android:name=".javabase.JavaBaseActivity" />
         <activity android:name=".javabase.threadpool.ThreedPoolActivity" />
@@ -69,16 +70,17 @@
 
         <activity
             android:name=".androidbase.lifecycle.activity.LifeCycleActivity1"
-            android:launchMode="standard" />
+            android:launchMode="standard"></activity>
+
         <activity
             android:name=".androidbase.lifecycle.activity.LifeCycleActivity2"
-            android:launchMode="singleInstance" />
+            android:launchMode="singleTop" />
         <activity
             android:name=".androidbase.lifecycle.activity.LifeCycleActivity3"
             android:launchMode="singleTask" />
         <activity
             android:name=".androidbase.lifecycle.activity.LifeCycleActivity4"
-            android:launchMode="singleTop" />
+            android:launchMode="singleInstance" />
 
         <!--自定义控件-->
         <activity android:name=".androidbase.widget.testview.TestViewActivity" />

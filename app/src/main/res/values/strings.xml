@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">StudyDemo</string>
+    <string name="load_cache">当前无网络! 为你智能加载缓存</string>
 </resources>
