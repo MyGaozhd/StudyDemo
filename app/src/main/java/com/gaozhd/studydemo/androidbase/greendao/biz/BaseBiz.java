@@ -17,9 +17,6 @@ import java.util.List;
  */
 public abstract class BaseBiz<M, K> implements IBiz<M, K> {
 
-
-
-
     /**
      * @title AbstractDao
      * @description: 获得操作Dao
