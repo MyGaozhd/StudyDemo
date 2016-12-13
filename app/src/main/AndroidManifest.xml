@@ -82,6 +82,11 @@
             android:name=".androidbase.lifecycle.activity.LifeCycleActivity4"
             android:launchMode="singleInstance" />
 
+        <activity android:name=".androidbase.greendao.GreendaoActivity" />
+        <activity android:name=".androidbase.viewpage.ViewPageActivity" />
+        <activity android:name=".androidbase.fragment.FragmentActivity" />
+        <activity android:name=".androidbase.animation.AnimationActivity" />
+
         <!--自定义控件-->
         <activity android:name=".androidbase.widget.testview.TestViewActivity" />
         <activity android:name=".androidbase.widget.studyview.StudyViewActivity" />
