@@ -15,7 +15,7 @@ public class AppConfig {
     /**
      * 数据库是否加密
      */
-    public static final boolean DB_ENCRYPTED = false;
+    public static final boolean DB_ENCRYPTED = true;
 
     /**
      * 数据库名称（临时）

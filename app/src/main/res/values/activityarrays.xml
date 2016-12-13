@@ -65,6 +65,14 @@
         <item>常见的内存溢出及解决办法</item>
         <!-- 7 Activity的生命周期 -->
         <item>Activity的生命周期</item>
+        <!-- 8 Greendao使用 -->
+        <item>GreenDao使用</item>
+        <!-- 9 viewpage + fragment 使用 -->
+        <item>ViewPage + Fragment 使用</item>
+        <!-- 10 fragment 使用 -->
+        <item> Fragment 使用</item>
+        <!-- 11 图片旋转动画 -->
+        <item> 图片旋转动画</item>
     </string-array>
 
     <!-- 所有的Broadcast -->

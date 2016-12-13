@@ -15,7 +15,7 @@ import com.gaozhd.studydemo.androidbase.greendao.entry.DBUser;
 /** 
  * DAO for table "user".
 */
-public class DBUserDao extends AbstractDao<DBUser, Void> {
+public class DBUserDao extends AbstractDao<DBUser, Long> {
 
     public static final String TABLENAME = "user";
 
@@ -24,7 +24,7 @@ public class DBUserDao extends AbstractDao<DBUser, Void> {
      * Can be used for QueryBuilder and for referencing column names.
      */
     public static class Properties {
-        public final static Property Id = new Property(0, String.class, "id", false, "id");
+        public final static Property Id = new Property(0, Long.class, "id", true, "_id");
         public final static Property Number = new Property(1, String.class, "number", false, "number");
         public final static Property Name = new Property(2, String.class, "name", false, "name");
         public final static Property Sex = new Property(3, String.class, "sex", false, "sex");
@@ -44,8 +44,8 @@ public class DBUserDao extends AbstractDao<DBUser, Void> {
     public static void createTable(Database db, boolean ifNotExists) {
         String constraint = ifNotExists? "IF NOT EXISTS ": "";
         db.execSQL("CREATE TABLE " + constraint + "\"user\" (" + //
-                "\"id\" TEXT," + // 0: id
-                "\"number\" TEXT," + // 1: number
+                "\"_id\" INTEGER PRIMARY KEY ," + // 0: id
+                "\"number\" TEXT UNIQUE ," + // 1: number
                 "\"name\" TEXT," + // 2: name
                 "\"sex\" TEXT," + // 3: sex
                 "\"class\" TEXT);"); // 4: classID
@@ -61,9 +61,9 @@ public class DBUserDao extends AbstractDao<DBUser, Void> {
     protected final void bindValues(DatabaseStatement stmt, DBUser entity) {
         stmt.clearBindings();
  
-        String id = entity.getId();
+        Long id = entity.getId();
         if (id != null) {
-            stmt.bindString(1, id);
+            stmt.bindLong(1, id);
         }
  
         String number = entity.getNumber();
@@ -91,9 +91,9 @@ public class DBUserDao extends AbstractDao<DBUser, Void> {
     protected final void bindValues(SQLiteStatement stmt, DBUser entity) {
         stmt.clearBindings();
  
-        String id = entity.getId();
+        Long id = entity.getId();
         if (id != null) {
-            stmt.bindString(1, id);
+            stmt.bindLong(1, id);
         }
  
         String number = entity.getNumber();
@@ -118,14 +118,14 @@ public class DBUserDao extends AbstractDao<DBUser, Void> {
     }
 
     @Override
-    public Void readKey(Cursor cursor, int offset) {
-        return null;
+    public Long readKey(Cursor cursor, int offset) {
+        return cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0);
     }    
 
     @Override
     public DBUser readEntity(Cursor cursor, int offset) {
         DBUser entity = new DBUser( //
-            cursor.isNull(offset + 0) ? null : cursor.getString(offset + 0), // id
+            cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0), // id
             cursor.isNull(offset + 1) ? null : cursor.getString(offset + 1), // number
             cursor.isNull(offset + 2) ? null : cursor.getString(offset + 2), // name
             cursor.isNull(offset + 3) ? null : cursor.getString(offset + 3), // sex
@@ -136,7 +136,7 @@ public class DBUserDao extends AbstractDao<DBUser, Void> {
      
     @Override
     public void readEntity(Cursor cursor, DBUser entity, int offset) {
-        entity.setId(cursor.isNull(offset + 0) ? null : cursor.getString(offset + 0));
+        entity.setId(cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0));
         entity.setNumber(cursor.isNull(offset + 1) ? null : cursor.getString(offset + 1));
         entity.setName(cursor.isNull(offset + 2) ? null : cursor.getString(offset + 2));
         entity.setSex(cursor.isNull(offset + 3) ? null : cursor.getString(offset + 3));
@@ -144,20 +144,23 @@ public class DBUserDao extends AbstractDao<DBUser, Void> {
      }
     
     @Override
-    protected final Void updateKeyAfterInsert(DBUser entity, long rowId) {
-        // Unsupported or missing PK type
-        return null;
+    protected final Long updateKeyAfterInsert(DBUser entity, long rowId) {
+        entity.setId(rowId);
+        return rowId;
     }
     
     @Override
-    public Void getKey(DBUser entity) {
-        return null;
+    public Long getKey(DBUser entity) {
+        if(entity != null) {
+            return entity.getId();
+        } else {
+            return null;
+        }
     }
 
     @Override
     public boolean hasKey(DBUser entity) {
-        // TODO
-        return false;
+        return entity.getId() != null;
     }
 
     @Override

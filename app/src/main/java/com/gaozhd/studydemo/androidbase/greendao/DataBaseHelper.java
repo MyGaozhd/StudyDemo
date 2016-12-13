@@ -85,34 +85,34 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 	 * @throws
 	 */
 	public void createDataBase(Context context) {
-		try {
-			File dbDir = new File(AppConfig.DB_PATH_TEMP);
-			// 如果不存在该目录则创建
-			if (!dbDir.exists()) {
-				dbDir.mkdir();
-			}
-			// 打开静态数据库文件的输入流
-			InputStream is = context.getResources().openRawResource(R.raw.studydemo);
-			// 打开目标数据库文件的输出流
-			FileOutputStream os = new FileOutputStream(AppConfig.DB_PATH_TEMP + "/"
-					+ AppConfig.DB_NAME);
-			byte[] buffer = new byte[BUFFER_SIZE];
-			int count = 0;
-			// 将静态数据库文件拷贝到目的地
-			while ((count = is.read(buffer)) > 0) {
-				os.write(buffer, 0, count);
-			}
-			is.close();
-			os.close();
-		} catch (FileNotFoundException e) {
-			Log.e(LOG_TAG, "FileNotFoundException");
-			e.printStackTrace();
-		} catch (NotFoundException e) {
-			Log.e(LOG_TAG, "NotFoundException");
-			e.printStackTrace();
-		} catch (IOException e) {
-			Log.e(LOG_TAG, "IOException");
-			e.printStackTrace();
-		}
+//		try {
+//			File dbDir = new File(AppConfig.DB_PATH_TEMP);
+//			// 如果不存在该目录则创建
+//			if (!dbDir.exists()) {
+//				dbDir.mkdir();
+//			}
+//			// 打开静态数据库文件的输入流
+//			InputStream is = context.getResources().openRawResource(R.raw.studydemo);
+//			// 打开目标数据库文件的输出流
+//			FileOutputStream os = new FileOutputStream(AppConfig.DB_PATH_TEMP + "/"
+//					+ AppConfig.DB_NAME);
+//			byte[] buffer = new byte[BUFFER_SIZE];
+//			int count = 0;
+//			// 将静态数据库文件拷贝到目的地
+//			while ((count = is.read(buffer)) > 0) {
+//				os.write(buffer, 0, count);
+//			}
+//			is.close();
+//			os.close();
+//		} catch (FileNotFoundException e) {
+//			Log.e(LOG_TAG, "FileNotFoundException");
+//			e.printStackTrace();
+//		} catch (NotFoundException e) {
+//			Log.e(LOG_TAG, "NotFoundException");
+//			e.printStackTrace();
+//		} catch (IOException e) {
+//			Log.e(LOG_TAG, "IOException");
+//			e.printStackTrace();
+//		}
 	}
 }

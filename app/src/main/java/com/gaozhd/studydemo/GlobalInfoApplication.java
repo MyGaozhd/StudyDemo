@@ -5,7 +5,6 @@ import android.app.Application;
 import android.content.SharedPreferences;
 
 import com.gaozhd.studydemo.androidbase.crash.RebootThreadExceptionHandler;
-import com.gaozhd.studydemo.androidbase.greendao.DBManager;
 import com.gaozhd.studydemo.androidbase.greendao.DataBaseHelper;
 import com.squareup.leakcanary.LeakCanary;
 
@@ -48,12 +47,6 @@ public class GlobalInfoApplication extends Application {
 
         // 程序异常关闭1s之后重新启动
         RebootThreadExceptionHandler.getInstance(getBaseContext());
-
-        // 初始化数据库
-        DBManager.getInstance(this);
-
-        // 临时创建yidonghuli.db，便于Android端各模块开发
-        initDataBase();
     }
 
     /**

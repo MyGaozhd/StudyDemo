@@ -1,13 +1,10 @@
 package com.gaozhd.studydemo.androidbase.greendao.biz;
 
-import android.content.Context;
-
 import com.gaozhd.studydemo.androidbase.greendao.DBManager;
 import com.gaozhd.studydemo.androidbase.greendao.dao.DBUserDao;
-import com.gaozhd.studydemo.androidbase.greendao.dao.DaoSession;
 import com.gaozhd.studydemo.androidbase.greendao.entry.DBUser;
 
-import org.greenrobot.greendao.query.QueryBuilder;
+import org.greenrobot.greendao.AbstractDao;
 
 import java.util.List;
 
@@ -17,24 +14,24 @@ import java.util.List;
  * @Description: ${todo}
  * @date 2016/10/18 17:41
  */
-public class DBUserBiz {
+public class DBUserBiz extends BaseBiz<DBUser, String> {
 
     private DBUserDao dbUserDao = null;
-    private QueryBuilder<DBUser> dbUserQueryBuilder = null;
 
-    public DBUserBiz(Context context) {
-        DBManager dbManager = DBManager.getInstance(context);
-        DaoSession daoSession = dbManager.getDaoSession();
-
-        dbUserDao = daoSession.getDBUserDao();
-        dbUserQueryBuilder = dbUserDao.queryBuilder();
+    public DBUserBiz() {
+        dbUserDao = DBManager.getInstance().getDaoSession().getDBUserDao();
     }
 
-    public List<DBUser> getAllUserList() {
-        return dbUserQueryBuilder.orderAsc(DBUserDao.Properties.Id).list();
-    }
+//    public List<DBUser> getAllUserList() {
+//        return getQueryBuilder().orderAsc(DBUserDao.Properties.Id).list();
+//    }
 
     public DBUser getUserByID(String ID) {
-        return dbUserQueryBuilder.where(DBUserDao.Properties.Number.eq(ID)).unique();
+        return getQueryBuilder().where(DBUserDao.Properties.Number.eq(ID)).unique();
+    }
+
+    @Override
+    public AbstractDao getAbstractDao() {
+        return dbUserDao;
     }
 }

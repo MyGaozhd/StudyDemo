@@ -2,7 +2,9 @@ package com.gaozhd.studydemo.androidbase.greendao.entry;
 
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Generated;
+import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Property;
+import org.greenrobot.greendao.annotation.Unique;
 
 /**
  * @author Gao Zhidong <gaozhidong@tiantanhehe.com>
@@ -13,9 +15,11 @@ import org.greenrobot.greendao.annotation.Property;
 @Entity(nameInDb = "user")
 public class DBUser {
 
-    @Property(nameInDb = "id")
-    private String id;
+    //    @Property(nameInDb = "id")
+    @Id
+    private Long id;
     @Property(nameInDb = "number")
+    @Unique
     private String number;
     @Property(nameInDb = "name")
     private String name;
@@ -24,9 +28,13 @@ public class DBUser {
     @Property(nameInDb = "class")
     private String classID;
 
-    @Generated(hash = 354713538)
-    public DBUser(String id, String number, String name, String sex,
-                  String classID) {
+    @Generated(hash = 138933025)
+    public DBUser() {
+    }
+
+
+    @Generated(hash = 1643895370)
+    public DBUser(Long id, String number, String name, String sex, String classID) {
         this.id = id;
         this.number = number;
         this.name = name;
@@ -34,17 +42,6 @@ public class DBUser {
         this.classID = classID;
     }
 
-    @Generated(hash = 138933025)
-    public DBUser() {
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getNumber() {
         return number;
@@ -76,5 +73,13 @@ public class DBUser {
 
     public void setClassID(String classID) {
         this.classID = classID;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

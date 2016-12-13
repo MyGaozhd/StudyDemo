@@ -4,9 +4,9 @@ package com.gaozhd.studydemo.androidbase.greendao;
 import android.content.Context;
 
 import com.gaozhd.studydemo.AppConfig;
+import com.gaozhd.studydemo.GlobalInfoApplication;
 import com.gaozhd.studydemo.androidbase.greendao.dao.DaoMaster;
 import com.gaozhd.studydemo.androidbase.greendao.dao.DaoSession;
-
 import org.greenrobot.greendao.database.Database;
 
 public class DBManager {
@@ -21,16 +21,16 @@ public class DBManager {
 
     public DBManager(Context context) {
         this.mContext = context;
-        DaoMaster.DevOpenHelper mDevOpenHelper = new DaoMaster.DevOpenHelper(context, ENCRYPTED ? DB_NAME+"-encrypted" : DB_NAME);
+        DaoMaster.DevOpenHelper mDevOpenHelper = new DaoMaster.DevOpenHelper(context, ENCRYPTED ? DB_NAME + "-encrypted" : DB_NAME);
         Database db = ENCRYPTED ? mDevOpenHelper.getEncryptedWritableDb("super-secret") : mDevOpenHelper.getWritableDb();
         mDaoSession = new DaoMaster(db).newSession();
     }
 
-    public static DBManager getInstance(Context context) {
+    public static DBManager getInstance() {
         if (mInstance == null) {
             synchronized (DBManager.class) {
                 if (mInstance == null) {
-                    mInstance = new DBManager(context);
+                    mInstance = new DBManager(GlobalInfoApplication.getInstance());
                 }
             }
         }
