@@ -91,10 +91,18 @@
         <activity android:name=".androidbase.widget.testview.TestViewActivity" />
         <activity android:name=".androidbase.widget.studyview.StudyViewActivity" />
 
+        <!--Android 提高-->
+        <activity android:name=".androidup.AndroidUpActivity" />
+        <activity android:name=".androidup.process.ProgressActivity" />
+
         <!--广播注册-->
         <receiver android:name=".broadcast.Broadcast0" />
         <!-- 注册自定义静态广播接收器 开机启动工具类需要此配置 -->
         <receiver android:name="com.gaozhd.studydemo.androidbase.crash.StartAppReceiver" />
 
+        <!--service-->
+        <service
+            android:name=".androidup.process.PersnalProgress"
+            android:process=":remote" />
     </application>
 </manifest>

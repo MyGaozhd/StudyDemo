@@ -24,6 +24,8 @@
         <item>Android基础</item>
         <!-- 9 程序崩溃自动重启 -->
         <item>程序崩溃自动重启</item>
+        <!-- 10 android提高 -->
+        <item>android提高</item>
     </string-array>
 
     <!-- 所有的Activity -->
@@ -98,6 +100,13 @@
         <item>TestView</item>
         <!-- 1 studyview -->
         <item>StudyView</item>
+    </string-array>
+
+    <!-- Android 提高 所有的Activity -->
+    <string-array name="allAndroidUp">
+
+        <!-- 0  开启双进程-->
+        <item>开启双进程</item>
     </string-array>
 
 </resources>

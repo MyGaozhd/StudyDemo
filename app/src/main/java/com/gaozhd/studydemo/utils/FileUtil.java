@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
 public class FileUtil {
+
 	/**
 	 * 默认皮肤文件路径
 	 */
