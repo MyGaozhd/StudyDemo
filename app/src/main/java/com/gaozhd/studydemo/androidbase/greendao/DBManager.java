@@ -2,6 +2,7 @@
 package com.gaozhd.studydemo.androidbase.greendao;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 
 import com.gaozhd.studydemo.AppConfig;
 import com.gaozhd.studydemo.GlobalInfoApplication;
