@@ -50,6 +50,7 @@
         <!--java基础-->
         <activity android:name=".javabase.JavaBaseActivity" />
         <activity android:name=".javabase.threadpool.ThreedPoolActivity" />
+        <activity android:name=".javabase.trycatch.ExceptionActivity" />
         <!--android基础-->
         <activity android:name=".androidbase.AndroidBaseActivity" />
         <activity android:name=".androidbase.recyclerview.RecyclerViewActivity0" />

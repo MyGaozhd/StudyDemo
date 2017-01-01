@@ -13,6 +13,8 @@ import com.gaozhd.studydemo.activity.BaseActivity;
 import com.gaozhd.studydemo.activity.ShowListActivity;
 import com.gaozhd.studydemo.designpattern.observer.ObserverActivity;
 import com.gaozhd.studydemo.javabase.threadpool.ThreedPoolActivity;
+import com.gaozhd.studydemo.javabase.trycatch.ExceptionA;
+import com.gaozhd.studydemo.javabase.trycatch.ExceptionActivity;
 
 public class JavaBaseActivity extends ShowListActivity {
 
@@ -26,6 +28,8 @@ public class JavaBaseActivity extends ShowListActivity {
         switch (position) {
             case 0:
                 intent.setClass(JavaBaseActivity.this, ThreedPoolActivity.class);
+            case 1:
+                intent.setClass(JavaBaseActivity.this, ExceptionActivity.class);
                 break;
             default:
                 break;

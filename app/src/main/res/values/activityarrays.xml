@@ -46,6 +46,8 @@
 
         <!-- 0 线程池 -->
         <item>线程池</item>
+        <!-- 1 try catch -->
+        <item>try catch</item>
     </string-array>
 
     <!-- AndroidBase所有的Activity -->
