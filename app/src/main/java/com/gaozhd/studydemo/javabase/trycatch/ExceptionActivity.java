@@ -47,9 +47,12 @@ public class ExceptionActivity extends BaseActivity {
         LogUtil.log("test4: " + test4().getName() + "");
 
         LogUtil.log("test5: " + test5() + "");
+
+        LogUtil.log("test6: " + test6() + "");
     }
 
     private void test1() {
+        LogUtil.log("\n");
         try {
             try {
                 throw new ExceptionB();
@@ -66,6 +69,7 @@ public class ExceptionActivity extends BaseActivity {
     }
 
     private void test2() throws ExceptionA {
+        LogUtil.log("\n");
         try {
             try {
                 throw new ExceptionA();
@@ -82,6 +86,7 @@ public class ExceptionActivity extends BaseActivity {
     }
 
     private int test3() {
+        LogUtil.log("\n");
         int i = 0;
         try {
             try {
@@ -94,10 +99,12 @@ public class ExceptionActivity extends BaseActivity {
             return i;
         } finally {
             i = 2;
+
         }
     }
 
     private User test4() {
+        LogUtil.log("\n");
         User user = new User("gaozhd", "男");
         try {
             try {
@@ -114,6 +121,7 @@ public class ExceptionActivity extends BaseActivity {
     }
 
     private Integer test5() {
+        LogUtil.log("\n");
         Integer i = new Integer(16654789);
         try {
             try {
@@ -123,9 +131,30 @@ public class ExceptionActivity extends BaseActivity {
             }
         } catch (ExceptionB exceptionB) {
             LogUtil.log(i + "");
+            LogUtil.log(i.hashCode());
             return i;
         } finally {
             i = new Integer(225489489);
+            LogUtil.log(i.hashCode());
+        }
+    }
+
+    private Integer test6() {
+        LogUtil.log("\n");
+        Integer i = new Integer(1665554789);
+        try {
+            try {
+                throw new ExceptionB();
+            } catch (ExceptionA a) {
+                throw a;
+            }
+        } catch (ExceptionB exceptionB) {
+            LogUtil.log(i + "");
+            LogUtil.log(i.hashCode());
+            return i;
+        } finally {
+            i = 225489489;
+            LogUtil.log(i.hashCode());
         }
     }
 }
