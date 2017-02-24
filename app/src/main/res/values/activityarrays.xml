@@ -77,6 +77,8 @@
         <item> Fragment 使用</item>
         <!-- 11 图片旋转动画 -->
         <item> 图片旋转动画</item>
+        <!-- 12 touch时间传递机制 -->
+        <item> 图片旋转动画</item>
     </string-array>
 
     <!-- 所有的Broadcast -->

@@ -87,7 +87,7 @@
         <activity android:name=".androidbase.viewpage.ViewPageActivity" />
         <activity android:name=".androidbase.fragment.FragmentActivity" />
         <activity android:name=".androidbase.animation.AnimationActivity" />
-
+        <activity android:name=".androidbase.touch.TouchActivity" />
         <!--自定义控件-->
         <activity android:name=".androidbase.widget.testview.TestViewActivity" />
         <activity android:name=".androidbase.widget.studyview.StudyViewActivity" />

@@ -14,6 +14,7 @@ import com.gaozhd.studydemo.androidbase.oom.OOMActivity;
 import com.gaozhd.studydemo.androidbase.recyclerview.RecyclerViewActivity0;
 import com.gaozhd.studydemo.androidbase.retrofit.RetrofitActivity;
 import com.gaozhd.studydemo.androidbase.rxjava.RxJavaActivity;
+import com.gaozhd.studydemo.androidbase.touch.TouchActivity;
 import com.gaozhd.studydemo.androidbase.viewpage.ViewPageActivity;
 import com.gaozhd.studydemo.androidbase.widget.WidgetActivity;
 
@@ -59,6 +60,9 @@ public class AndroidBaseActivity extends ShowListActivity {
                 break;
             case 11:
                 intent.setClass(AndroidBaseActivity.this, AnimationActivity.class);
+                break;
+            case 12:
+                intent.setClass(AndroidBaseActivity.this, TouchActivity.class);
                 break;
             default:
                 break;
