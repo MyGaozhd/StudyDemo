@@ -8,7 +8,10 @@ import com.gaozhd.studydemo.R;
 import com.gaozhd.studydemo.activity.BaseActivity;
 import com.gaozhd.studydemo.androidbase.greendao.biz.DBUserBiz;
 import com.gaozhd.studydemo.androidbase.greendao.entry.DBUser;
+import com.gaozhd.studydemo.utils.LogUtil;
+import com.google.gson.Gson;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -38,15 +41,39 @@ public class GreendaoActivity extends BaseActivity {
 
     private void add() {
         count++;
-        for (int i = 0; i < 3; i++) {
+        List<DBUser> list = new ArrayList<>();
+        for (int i = 0; i < 3000; i++) {
 //            DBUser u = new DBUser(i + "", "number:" + i, "name:" + i, "sex:" + i, "classID:" + i);
             DBUser u = new DBUser(null, "number:" + i, "name:" + i, "sex:" + i, "classID:" + count);
-            userBiz.insertOrReplace(u);
+//            userBiz.insertOrReplace(u);
+            list.add(u);
         }
+        userBiz.insertList(list);
         select();
     }
 
+    public static final int ONCESIZE = 200;
+
     private void delete() {
+
+        List<String> list = new ArrayList<>();
+        for (int i = 0; i < 1000; i++) {
+            list.add(i + "");
+        }
+
+        if (list.size() > ONCESIZE) {
+            int size = list.size();
+            while (size > ONCESIZE) {
+                List<String> temp = list.subList(size - ONCESIZE, size);
+                LogUtil.log(new Gson().toJson(temp));
+                LogUtil.log(temp.size() + "");
+                size -= ONCESIZE;
+            }
+            List<String> temp = list.subList(size - ONCESIZE, size);
+            LogUtil.log(new Gson().toJson(temp));
+            LogUtil.log(temp.size() + "");
+        }
+
     }
 
     private void update() {
