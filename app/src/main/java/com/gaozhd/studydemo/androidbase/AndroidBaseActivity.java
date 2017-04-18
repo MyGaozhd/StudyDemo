@@ -14,8 +14,10 @@ import com.gaozhd.studydemo.androidbase.oom.OOMActivity;
 import com.gaozhd.studydemo.androidbase.recyclerview.RecyclerViewActivity0;
 import com.gaozhd.studydemo.androidbase.retrofit.RetrofitActivity;
 import com.gaozhd.studydemo.androidbase.rxjava.RxJavaActivity;
+import com.gaozhd.studydemo.androidbase.savestate.SaveStateActivity;
 import com.gaozhd.studydemo.androidbase.touch.TouchActivity;
 import com.gaozhd.studydemo.androidbase.viewpage.ViewPageActivity;
+import com.gaozhd.studydemo.androidbase.webview.WebviewWithCookieActivity;
 import com.gaozhd.studydemo.androidbase.widget.WidgetActivity;
 
 public class AndroidBaseActivity extends ShowListActivity {
@@ -63,6 +65,14 @@ public class AndroidBaseActivity extends ShowListActivity {
                 break;
             case 12:
                 intent.setClass(AndroidBaseActivity.this, TouchActivity.class);
+                break;
+            case 13:
+                intent.setClass(AndroidBaseActivity.this, WebviewWithCookieActivity.class);
+                break;
+            case 14:
+                intent.setClass(AndroidBaseActivity.this, SaveStateActivity.class);
+                intent.putExtra("key1", "ss");
+                intent.putExtra("key2", 11);
                 break;
             default:
                 break;

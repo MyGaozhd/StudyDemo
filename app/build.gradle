@@ -27,6 +27,7 @@ android {
 //        // Enabling multidex support.
 //        multiDexEnabled true
 //    }
+    buildToolsVersion '25.0.0'
 }
 
 dependencies {

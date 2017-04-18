@@ -77,8 +77,12 @@
         <item> Fragment 使用</item>
         <!-- 11 图片旋转动画 -->
         <item> 图片旋转动画</item>
-        <!-- 12 touch时间传递机制 -->
-        <item> 图片旋转动画</item>
+        <!-- 12 touch事件传递机制 -->
+        <item> touch事件传递机制</item>
+        <!-- 13 webview访问时自带cookie信息 -->
+        <item> webview访问时自带cookie信息</item>
+        <!-- 14 activity 状态保存 -->
+        <item> activity 状态保存</item>
     </string-array>
 
     <!-- 所有的Broadcast -->

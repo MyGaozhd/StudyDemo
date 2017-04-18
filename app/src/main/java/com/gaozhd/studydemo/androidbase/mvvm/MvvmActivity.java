@@ -6,7 +6,7 @@ import android.widget.EditText;
 
 import com.gaozhd.studydemo.R;
 import com.gaozhd.studydemo.activity.BaseActivity;
-import com.gaozhd.studydemo.databinding.LayoutMvvm1Binding;
+//import com.gaozhd.studydemo.databinding.LayoutMvvm1Binding;
 
 /**
  * @author Gao Zhidong <gaozhidong@tiantanhehe.com>
@@ -19,8 +19,8 @@ public class MvvmActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        LayoutMvvm1Binding layoutMvvm1Binding = DataBindingUtil.setContentView(this, R.layout.layout_mvvm1);
-        User user = new User("gaozhd", "king");
-        layoutMvvm1Binding.setUser(user);
+//        LayoutMvvm1Binding layoutMvvm1Binding = DataBindingUtil.setContentView(this, R.layout.layout_mvvm1);
+//        User user = new User("gaozhd", "king");
+//        layoutMvvm1Binding.setUser(user);
     }
 }
