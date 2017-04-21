@@ -83,6 +83,8 @@
         <item> webview访问时自带cookie信息</item>
         <!-- 14 activity 状态保存 -->
         <item> activity 状态保存</item>
+        <!-- 15 webview访问时默认先读取本地，之后连接网络 -->
+        <item> webview访问时默认先读取本地，之后连接网络</item>
     </string-array>
 
     <!-- 所有的Broadcast -->

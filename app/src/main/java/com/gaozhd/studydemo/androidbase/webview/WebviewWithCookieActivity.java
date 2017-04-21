@@ -8,10 +8,8 @@ import android.util.Log;
 import android.webkit.CookieManager;
 import android.webkit.CookieSyncManager;
 import android.webkit.WebView;
-
 import com.gaozhd.studydemo.R;
 import com.gaozhd.studydemo.activity.BaseActivity;
-
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
@@ -39,6 +37,7 @@ public class WebviewWithCookieActivity extends BaseActivity {
         String cookies = String.format(Locale.US, "keepLogin=on;lang=zh-cn;sid=a2t53t7kgujjqsopaeqs10d600;theme=default;windowHeight=925;windowHeight=976;za=gaozhidong;zp=5fc1a419e9f2b4c32c04c56f9f5fc090c7cd7f7d;windowWidth=1922;windowWidth=1918",
                 new Date().getTime());
         clearCookies(this);
+
 
         Map<String, String> header = new HashMap<>();
         header.put("Cookie", cookies);

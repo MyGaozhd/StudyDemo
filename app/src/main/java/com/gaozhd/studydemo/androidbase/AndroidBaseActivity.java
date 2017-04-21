@@ -17,6 +17,7 @@ import com.gaozhd.studydemo.androidbase.rxjava.RxJavaActivity;
 import com.gaozhd.studydemo.androidbase.savestate.SaveStateActivity;
 import com.gaozhd.studydemo.androidbase.touch.TouchActivity;
 import com.gaozhd.studydemo.androidbase.viewpage.ViewPageActivity;
+import com.gaozhd.studydemo.androidbase.webview.WebviewLocalFirstActivity;
 import com.gaozhd.studydemo.androidbase.webview.WebviewWithCookieActivity;
 import com.gaozhd.studydemo.androidbase.widget.WidgetActivity;
 
@@ -73,6 +74,9 @@ public class AndroidBaseActivity extends ShowListActivity {
                 intent.setClass(AndroidBaseActivity.this, SaveStateActivity.class);
                 intent.putExtra("key1", "ss");
                 intent.putExtra("key2", 11);
+                break;
+            case 15:
+                intent.setClass(AndroidBaseActivity.this, WebviewLocalFirstActivity.class);
                 break;
             default:
                 break;

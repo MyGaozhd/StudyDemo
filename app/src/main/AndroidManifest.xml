@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.gaozhd.studydemo">
+          package="com.gaozhd.studydemo">
 
     <!-- 网络相关 -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
 
     <application
         android:name=".GlobalInfoApplication"
@@ -24,41 +24,41 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
             </intent-filter>
         </activity>
 
-        <activity android:name="com.gaozhd.studydemo.activity.Activity0" />
-        <activity android:name="com.gaozhd.studydemo.activity.Activity0_item1" />
-        <activity android:name="com.gaozhd.studydemo.activity.Activity1" />
-        <activity android:name="com.gaozhd.studydemo.activity.Activity1_item1" />
-        <activity android:name="com.gaozhd.studydemo.activity.Activity1_item2" />
-        <activity android:name="com.gaozhd.studydemo.activity.Activity2" />
-        <activity android:name="com.gaozhd.studydemo.activity.Activity3" />
-        <activity android:name="com.gaozhd.studydemo.activity.Activity4" />
-        <activity android:name="com.gaozhd.studydemo.activity.Activity5" />
+        <activity android:name="com.gaozhd.studydemo.activity.Activity0"/>
+        <activity android:name="com.gaozhd.studydemo.activity.Activity0_item1"/>
+        <activity android:name="com.gaozhd.studydemo.activity.Activity1"/>
+        <activity android:name="com.gaozhd.studydemo.activity.Activity1_item1"/>
+        <activity android:name="com.gaozhd.studydemo.activity.Activity1_item2"/>
+        <activity android:name="com.gaozhd.studydemo.activity.Activity2"/>
+        <activity android:name="com.gaozhd.studydemo.activity.Activity3"/>
+        <activity android:name="com.gaozhd.studydemo.activity.Activity4"/>
+        <activity android:name="com.gaozhd.studydemo.activity.Activity5"/>
 
         <!--设计模式-->
-        <activity android:name=".designpattern.DesignPatternActivity" />
-        <activity android:name=".designpattern.observer.ObserverActivity" />
-        <activity android:name=".designpattern.proxy.ProxyActivity" />
-        <activity android:name=".designpattern.decorator.DecoratorActivity" />
-        <activity android:name=".designpattern.cloneable.CloneActivity" />
+        <activity android:name=".designpattern.DesignPatternActivity"/>
+        <activity android:name=".designpattern.observer.ObserverActivity"/>
+        <activity android:name=".designpattern.proxy.ProxyActivity"/>
+        <activity android:name=".designpattern.decorator.DecoratorActivity"/>
+        <activity android:name=".designpattern.cloneable.CloneActivity"/>
         <!--java基础-->
-        <activity android:name=".javabase.JavaBaseActivity" />
-        <activity android:name=".javabase.threadpool.ThreedPoolActivity" />
-        <activity android:name=".javabase.trycatch.ExceptionActivity" />
+        <activity android:name=".javabase.JavaBaseActivity"/>
+        <activity android:name=".javabase.threadpool.ThreedPoolActivity"/>
+        <activity android:name=".javabase.trycatch.ExceptionActivity"/>
         <!--android基础-->
-        <activity android:name=".androidbase.AndroidBaseActivity" />
-        <activity android:name=".androidbase.recyclerview.RecyclerViewActivity0" />
-        <activity android:name=".androidbase.mvvm.MvvmActivity" />
-        <activity android:name=".androidbase.rxjava.RxJavaActivity" />
-        <activity android:name=".androidbase.widget.WidgetActivity" />
-        <activity android:name=".androidbase.retrofit.RetrofitActivity" />
-        <activity android:name=".androidbase.oom.OOMActivity" />
+        <activity android:name=".androidbase.AndroidBaseActivity"/>
+        <activity android:name=".androidbase.recyclerview.RecyclerViewActivity0"/>
+        <activity android:name=".androidbase.mvvm.MvvmActivity"/>
+        <activity android:name=".androidbase.rxjava.RxJavaActivity"/>
+        <activity android:name=".androidbase.widget.WidgetActivity"/>
+        <activity android:name=".androidbase.retrofit.RetrofitActivity"/>
+        <activity android:name=".androidbase.oom.OOMActivity"/>
         <!--标准
         <activity
             android:name=".androidbase.lifecycle.activity.LifeCycleActivity1"/>
@@ -75,37 +75,39 @@
 
         <activity
             android:name=".androidbase.lifecycle.activity.LifeCycleActivity2"
-            android:launchMode="singleTop" />
+            android:launchMode="singleTop"/>
         <activity
             android:name=".androidbase.lifecycle.activity.LifeCycleActivity3"
-            android:launchMode="singleTask" />
+            android:launchMode="singleTask"/>
         <activity
             android:name=".androidbase.lifecycle.activity.LifeCycleActivity4"
-            android:launchMode="singleInstance" />
+            android:launchMode="singleInstance"/>
 
-        <activity android:name=".androidbase.greendao.GreendaoActivity" />
-        <activity android:name=".androidbase.viewpage.ViewPageActivity" />
-        <activity android:name=".androidbase.fragment.FragmentActivity" />
-        <activity android:name=".androidbase.animation.AnimationActivity" />
-        <activity android:name=".androidbase.touch.TouchActivity" />
-        <activity android:name=".androidbase.webview.WebviewWithCookieActivity" />
-        <activity android:name=".androidbase.savestate.SaveStateActivity" />
+        <activity android:name=".androidbase.greendao.GreendaoActivity"/>
+        <activity android:name=".androidbase.viewpage.ViewPageActivity"/>
+        <activity android:name=".androidbase.fragment.FragmentActivity"/>
+        <activity android:name=".androidbase.animation.AnimationActivity"/>
+        <activity android:name=".androidbase.touch.TouchActivity"/>
+        <activity android:name=".androidbase.webview.WebviewWithCookieActivity"/>
+        <activity android:name=".androidbase.savestate.SaveStateActivity"/>
+        <activity android:name=".androidbase.webview.WebviewLocalFirstActivity"/>
+
         <!--自定义控件-->
-        <activity android:name=".androidbase.widget.testview.TestViewActivity" />
-        <activity android:name=".androidbase.widget.studyview.StudyViewActivity" />
+        <activity android:name=".androidbase.widget.testview.TestViewActivity"/>
+        <activity android:name=".androidbase.widget.studyview.StudyViewActivity"/>
 
         <!--Android 提高-->
-        <activity android:name=".androidup.AndroidUpActivity" />
-        <activity android:name=".androidup.process.ProgressActivity" />
+        <activity android:name=".androidup.AndroidUpActivity"/>
+        <activity android:name=".androidup.process.ProgressActivity"/>
 
         <!--广播注册-->
-        <receiver android:name=".broadcast.Broadcast0" />
+        <receiver android:name=".broadcast.Broadcast0"/>
         <!-- 注册自定义静态广播接收器 开机启动工具类需要此配置 -->
-        <receiver android:name="com.gaozhd.studydemo.androidbase.crash.StartAppReceiver" />
+        <receiver android:name="com.gaozhd.studydemo.androidbase.crash.StartAppReceiver"/>
 
         <!--service-->
         <service
             android:name=".androidup.process.PersnalProgress"
-            android:process=":remote" />
+            android:process=":remote"/>
     </application>
 </manifest>
