@@ -7,6 +7,7 @@ import com.gaozhd.studydemo.R;
 import com.gaozhd.studydemo.activity.MainActivity;
 import com.gaozhd.studydemo.activity.ShowListActivity;
 import com.gaozhd.studydemo.androidbase.AndroidBaseActivity;
+import com.gaozhd.studydemo.androidup.mpandroidchart.AndroidChartActivity;
 import com.gaozhd.studydemo.androidup.process.ProgressActivity;
 
 /**
@@ -26,6 +27,12 @@ public class AndroidUpActivity extends ShowListActivity {
         switch (position) {
             case 0:
                 intent.setClass(AndroidUpActivity.this, ProgressActivity.class);
+                break;
+            case 1:
+                intent.setClass(AndroidUpActivity.this, ProgressActivity.class);
+                break;
+            case 2:
+                intent.setClass(AndroidUpActivity.this, AndroidChartActivity.class);
                 break;
         }
     }

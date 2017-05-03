@@ -23,32 +23,23 @@ android {
     dataBinding {
         enabled = true
     }
-//    defaultConfig {
-//        // Enabling multidex support.
-//        multiDexEnabled true
-//    }
-    buildToolsVersion '25.0.0'
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.4.0'
     //recyclerview引用
     compile 'com.android.support:recyclerview-v7:23.2.1'
-
     //rxjava引用
     compile 'io.reactivex:rxandroid:1.2.1'
     compile 'io.reactivex:rxjava:1.1.6'
-
     //butterknife引用
     compile 'com.jakewharton:butterknife:8.1.0'
     apt 'com.jakewharton:butterknife-compiler:8.1.0'
-
     //greendao引用
     compile 'org.greenrobot:greendao:3.1.1'
     compile 'net.zetetic:android-database-sqlcipher:3.5.1'
-
     //retrofit引用
     compile 'com.google.code.gson:gson:2.7'
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
@@ -56,11 +47,19 @@ dependencies {
     compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
     compile 'com.squareup.okhttp3:okhttp:3.3.1'
     compile 'com.squareup.okhttp3:logging-interceptor:3.3.1'
-
     //leakcanary 内存泄漏检测
     debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
     releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
     testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    //bilibili ijk
+    compile 'tv.danmaku.ijk.media:ijkplayer-java:0.7.9'
+    compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.7.9'
+    compile 'tv.danmaku.ijk.media:ijkplayer-arm64:0.7.9'
+    compile 'tv.danmaku.ijk.media:ijkplayer-x86:0.7.9'
+    compile 'tv.danmaku.ijk.media:ijkplayer-exo:0.7.9'
+    compile files('libs/mpchartlib.jar')
+    //MPAndroidChart
+    compile 'com.github.PhilJay:MPAndroidChart:v3.0.1'
 }
 
 /**

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
           package="com.gaozhd.studydemo">
 
     <!-- 网络相关 -->
@@ -10,6 +11,11 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19"
+        tools:overrideLibrary="tv.danmaku.ijk.media.player_arm64"/>
 
     <application
         android:name=".GlobalInfoApplication"
@@ -99,6 +105,7 @@
         <!--Android 提高-->
         <activity android:name=".androidup.AndroidUpActivity"/>
         <activity android:name=".androidup.process.ProgressActivity"/>
+        <activity android:name=".androidup.mpandroidchart.AndroidChartActivity"/>
 
         <!--广播注册-->
         <receiver android:name=".broadcast.Broadcast0"/>

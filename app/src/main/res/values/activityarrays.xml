@@ -19,13 +19,13 @@
         <!-- 6 设计模式 -->
         <item>常用设计模式</item>
         <!-- 7 java基础 -->
-        <item>java基础</item>
+        <item>Java基础</item>
         <!-- 8 android基础 -->
         <item>Android基础</item>
         <!-- 9 程序崩溃自动重启 -->
         <item>程序崩溃自动重启</item>
         <!-- 10 android提高 -->
-        <item>android提高</item>
+        <item>Android提高</item>
     </string-array>
 
     <!-- 所有的Activity -->
@@ -117,6 +117,10 @@
 
         <!-- 0  开启双进程-->
         <item>开启双进程</item>
+        <!-- 1  bilibili视频音频播放器-->
+        <item>bilibili视频音频播放器</item>
+        <!-- 2  MPAndroidChart Android图表-->
+        <item>MPAndroidChart</item>
     </string-array>
 
 </resources>
