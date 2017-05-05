@@ -15,8 +15,4 @@
         <attr name="studyview_backColor" format="color"></attr>
     </declare-styleable>
     <attr name="entrySummaries" format="reference" />
-
-    <declare-styleable name="IjkListPreference">
-        <attr name="entrySummaries" />
-    </declare-styleable>
 </resources>

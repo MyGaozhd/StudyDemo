@@ -7,9 +7,9 @@ import com.gaozhd.studydemo.R;
 import com.gaozhd.studydemo.activity.MainActivity;
 import com.gaozhd.studydemo.activity.ShowListActivity;
 import com.gaozhd.studydemo.androidbase.AndroidBaseActivity;
-import com.gaozhd.studydemo.androidup.media.example.activities.FileExplorerActivity;
 import com.gaozhd.studydemo.androidup.mpandroidchart.AndroidChartActivity;
 import com.gaozhd.studydemo.androidup.process.ProgressActivity;
+import com.media.mediaplayer.activities.FileExplorerActivity;
 
 /**
  * @Author: Gao Zhidong <gaozhidong@tiantanhehe.com>
