@@ -14,6 +14,7 @@ import com.gaozhd.studydemo.activity.ShowListActivity;
 import com.gaozhd.studydemo.androidbase.mvvm.MvvmActivity;
 import com.gaozhd.studydemo.androidbase.recyclerview.RecyclerViewActivity0;
 import com.gaozhd.studydemo.androidbase.rxjava.RxJavaActivity;
+import com.gaozhd.studydemo.androidbase.widget.autotextview.AutoTextViewActivity;
 import com.gaozhd.studydemo.androidbase.widget.studyview.StudyViewActivity;
 import com.gaozhd.studydemo.androidbase.widget.testview.TestViewActivity;
 
@@ -32,6 +33,9 @@ public class WidgetActivity extends ShowListActivity {
                 break;
             case 1:
                 intent.setClass(WidgetActivity.this, StudyViewActivity.class);
+                break;
+            case 2:
+                intent.setClass(WidgetActivity.this, AutoTextViewActivity.class);
                 break;
             default:
                 break;

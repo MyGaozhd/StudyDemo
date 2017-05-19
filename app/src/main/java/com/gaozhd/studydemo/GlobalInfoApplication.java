@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import com.gaozhd.studydemo.androidbase.crash.RebootThreadExceptionHandler;
 import com.gaozhd.studydemo.androidbase.greendao.DataBaseHelper;
 import com.gaozhd.studydemo.utils.SystemUtil;
+import com.gaozhd.studydemo.utils.storage.StorageUtil;
 import com.squareup.leakcanary.LeakCanary;
 
 /**
@@ -40,6 +41,8 @@ public class GlobalInfoApplication extends Application {
         super.onCreate();
         appInstance = this;
 
+        StorageUtil.init(this, null);
+
         if (SystemUtil.inMainProcess(this)) {
             //leakcanary初始化
             if (LeakCanary.isInAnalyzerProcess(this)) {
@@ -47,8 +50,8 @@ public class GlobalInfoApplication extends Application {
             }
             LeakCanary.install(this);
 
-            // 程序异常关闭1s之后重新启动
-            RebootThreadExceptionHandler.getInstance(getBaseContext());
+//            // 程序异常关闭1s之后重新启动
+//            RebootThreadExceptionHandler.getInstance(getBaseContext());
         }
 
     }

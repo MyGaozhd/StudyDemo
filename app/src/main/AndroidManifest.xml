@@ -11,7 +11,6 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
-
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
@@ -38,6 +37,18 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
                 <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.gaozhd.studydemo.activity.TestActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN"/>-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+                <!--<category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>-->
+            <!--</intent-filter>-->
         </activity>
 
         <activity android:name="com.gaozhd.studydemo.activity.Activity0"/>
@@ -104,6 +115,7 @@
         <!--自定义控件-->
         <activity android:name=".androidbase.widget.testview.TestViewActivity"/>
         <activity android:name=".androidbase.widget.studyview.StudyViewActivity"/>
+        <activity android:name=".androidbase.widget.autotextview.AutoTextViewActivity"/>
 
         <!--Android 提高-->
         <activity android:name=".androidup.AndroidUpActivity"/>
@@ -112,8 +124,7 @@
 
         <!--广播注册-->
         <receiver android:name=".broadcast.Broadcast0"/>
-        <!-- 注册自定义静态广播接收器 开机启动工具类需要此配置 -->
-        <receiver android:name="com.gaozhd.studydemo.androidbase.crash.StartAppReceiver"/>
+        <receiver android:name=".androidbase.widget.autotextview.AutoSetTextSizeBroadcast"/>
 
         <!--service-->
         <service

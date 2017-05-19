@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+
+    <!-- 所有的Activity -->
+    <string-array name="testActivity">
+
+        <!-- 0 播放视频 -->
+        <item>播放视频</item>
+    </string-array>
+
     <!-- 所有的Activity -->
     <string-array name="allActivity">
 
@@ -110,6 +118,8 @@
         <item>TestView</item>
         <!-- 1 studyview -->
         <item>StudyView</item>
+        <!-- 2 自动加载字体大小 -->
+        <item>自动加载字体大小</item>
     </string-array>
 
     <!-- Android 提高 所有的Activity -->

@@ -25,7 +25,8 @@ public class WebviewWithCookieActivity extends BaseActivity {
 
     private static final String TAG = "gaozhd";
     private static final String BASE_URL = "http://10.0.3.2:5000";
-    public static final String URL = "http://42.120.41.126/zentaopms/www/task-view-8012.html";
+//    public static final String URL = "http://42.120.41.126/zentaopms/www/task-view-8012.html";
+    public static final String URL = "http://139.196.253.19:8088/tiantan_emr/ZhuyuanHushiYidongHuli/HuliJilu/showHuliJiluList/yiji_fenlei/护理记录/zhuyuan_id/103707";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -34,10 +35,12 @@ public class WebviewWithCookieActivity extends BaseActivity {
         WebView webView = (WebView) findViewById(R.id.webview);
         webView.setWebViewClient(new CommonWebClient());
 
-        String cookies = String.format(Locale.US, "keepLogin=on;lang=zh-cn;sid=a2t53t7kgujjqsopaeqs10d600;theme=default;windowHeight=925;windowHeight=976;za=gaozhidong;zp=5fc1a419e9f2b4c32c04c56f9f5fc090c7cd7f7d;windowWidth=1922;windowWidth=1918",
+//        String cookies = String.format(Locale.US, "keepLogin=on;lang=zh-cn;sid=a2t53t7kgujjqsopaeqs10d600;theme=default;windowHeight=925;windowHeight=976;za=gaozhidong;zp=5fc1a419e9f2b4c32c04c56f9f5fc090c7cd7f7d;windowWidth=1922;windowWidth=1918",
+//                new Date().getTime());
+
+        String cookies = String.format(Locale.US, "tiantanhehe=dul0dcvh7vh11hndtrjs7v6543;think_language=zh-CN",
                 new Date().getTime());
         clearCookies(this);
-
 
         Map<String, String> header = new HashMap<>();
         header.put("Cookie", cookies);

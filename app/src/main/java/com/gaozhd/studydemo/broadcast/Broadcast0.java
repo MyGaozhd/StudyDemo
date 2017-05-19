@@ -18,6 +18,7 @@ public class Broadcast0 extends BroadcastReceiver {
 
 	private onReceiver mReceiver = null;
 
+	public Broadcast0(){}
 	public Broadcast0(onReceiver pReceiver) {
 		mReceiver = pReceiver;
 	}
