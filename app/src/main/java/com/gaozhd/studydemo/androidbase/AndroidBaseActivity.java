@@ -20,6 +20,7 @@ import com.gaozhd.studydemo.androidbase.viewpage.ViewPageActivity;
 import com.gaozhd.studydemo.androidbase.webview.WebviewLocalFirstActivity;
 import com.gaozhd.studydemo.androidbase.webview.WebviewWithCookieActivity;
 import com.gaozhd.studydemo.androidbase.widget.WidgetActivity;
+import com.gaozhd.studydemo.androidbase.xmlparser.XmlParserActivity;
 
 public class AndroidBaseActivity extends ShowListActivity {
 
@@ -77,6 +78,9 @@ public class AndroidBaseActivity extends ShowListActivity {
                 break;
             case 15:
                 intent.setClass(AndroidBaseActivity.this, WebviewLocalFirstActivity.class);
+                break;
+            case 16:
+                intent.setClass(AndroidBaseActivity.this, XmlParserActivity.class);
                 break;
             default:
                 break;

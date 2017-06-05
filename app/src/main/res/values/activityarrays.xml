@@ -93,6 +93,8 @@
         <item> activity 状态保存</item>
         <!-- 15 webview访问时默认先读取本地，之后连接网络 -->
         <item> webview访问时默认先读取本地，之后连接网络</item>
+        <!-- 16 生成xml字符串 -->
+        <item> 生成xml字符串</item>
     </string-array>
 
     <!-- 所有的Broadcast -->
@@ -120,6 +122,12 @@
         <item>StudyView</item>
         <!-- 2 自动加载字体大小 -->
         <item>自动加载字体大小</item>
+        <!-- 3 贝塞尔曲线加载动画 -->
+        <item>贝塞尔曲线加载动画</item>
+        <!-- 4 字母导航控件 -->
+        <item>字母导航控件</item>
+        <!-- 5 防QQ拖动消息控件 -->
+        <item>防QQ拖动消息控件</item>
     </string-array>
 
     <!-- Android 提高 所有的Activity -->
@@ -131,6 +139,10 @@
         <item>bilibili视频音频播放器</item>
         <!-- 2  MPAndroidChart Android图表-->
         <item>MPAndroidChart</item>
+        <!-- 3 微信红包-->
+        <item>微信红包</item>
+        <!-- 4 插件化-->
+        <item>插件化demo</item>
     </string-array>
 
 </resources>

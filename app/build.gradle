@@ -29,7 +29,6 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile project(':mediaplayer')
-
     //recyclerview引用
     compile 'com.android.support:recyclerview-v7:23.2.1'
     //rxjava引用
@@ -54,7 +53,7 @@ dependencies {
     testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
     //MPAndroidChart
     compile 'com.github.PhilJay:MPAndroidChart:v3.0.1'
-
+    compile files('src/main/libs/ksoap2-android-assembly-3.0.0-jar-with-dependencies.jar')
 }
 
 /**

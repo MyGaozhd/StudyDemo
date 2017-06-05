@@ -11,8 +11,8 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -44,10 +44,10 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar">
             <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN"/>-->
+            <!--<action android:name="android.intent.action.MAIN"/>-->
 
-                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
-                <!--<category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>-->
+            <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+            <!--<category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>-->
             <!--</intent-filter>-->
         </activity>
 
@@ -111,16 +111,22 @@
         <activity android:name=".androidbase.webview.WebviewWithCookieActivity"/>
         <activity android:name=".androidbase.savestate.SaveStateActivity"/>
         <activity android:name=".androidbase.webview.WebviewLocalFirstActivity"/>
+        <activity android:name=".androidbase.xmlparser.XmlParserActivity"/>
 
         <!--自定义控件-->
         <activity android:name=".androidbase.widget.testview.TestViewActivity"/>
         <activity android:name=".androidbase.widget.studyview.StudyViewActivity"/>
         <activity android:name=".androidbase.widget.autotextview.AutoTextViewActivity"/>
+        <activity android:name=".androidbase.widget.loadingball.LoadingBallActivity"/>
+        <activity android:name=".androidbase.widget.slideview.SlideViewActivity"/>
+        <activity android:name=".androidbase.widget.dragview.DragActivity"/>
 
         <!--Android 提高-->
         <activity android:name=".androidup.AndroidUpActivity"/>
         <activity android:name=".androidup.process.ProgressActivity"/>
         <activity android:name=".androidup.mpandroidchart.AndroidChartActivity"/>
+        <activity android:name=".androidup.weixinhongbao.WeixinHongbaoActivity"/>
+        <activity android:name=".androidup.chajianhua.ChajianhuaActivity"/>
 
         <!--广播注册-->
         <receiver android:name=".broadcast.Broadcast0"/>
@@ -131,5 +137,18 @@
             android:name=".androidup.process.PersnalProgress"
             android:process=":remote"/>
 
+        <service
+            android:name=".androidup.weixinhongbao.HongbaoService"
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/hongbao_chajian"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config"></meta-data>
+        </service>
     </application>
 </manifest>

@@ -2,4 +2,5 @@
     <string name="app_name">StudyDemo</string>
     <string name="load_cache">当前无网络! 为你智能加载缓存</string>
     <string name="unknow_size">未知大小</string>
+    <string name="hongbao_chajian">微信抢红包插件</string>
 </resources>

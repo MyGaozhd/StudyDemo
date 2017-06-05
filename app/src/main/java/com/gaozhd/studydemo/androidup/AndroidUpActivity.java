@@ -7,8 +7,10 @@ import com.gaozhd.studydemo.R;
 import com.gaozhd.studydemo.activity.MainActivity;
 import com.gaozhd.studydemo.activity.ShowListActivity;
 import com.gaozhd.studydemo.androidbase.AndroidBaseActivity;
+import com.gaozhd.studydemo.androidup.chajianhua.ChajianhuaActivity;
 import com.gaozhd.studydemo.androidup.mpandroidchart.AndroidChartActivity;
 import com.gaozhd.studydemo.androidup.process.ProgressActivity;
+import com.gaozhd.studydemo.androidup.weixinhongbao.WeixinHongbaoActivity;
 import com.media.mediaplayer.activities.FileExplorerActivity;
 
 /**
@@ -34,6 +36,12 @@ public class AndroidUpActivity extends ShowListActivity {
                 break;
             case 2:
                 intent.setClass(AndroidUpActivity.this, AndroidChartActivity.class);
+                break;
+            case 3:
+                intent.setClass(AndroidUpActivity.this, WeixinHongbaoActivity.class);
+                break;
+            case 4:
+                intent.setClass(AndroidUpActivity.this, ChajianhuaActivity.class);
                 break;
         }
     }
