@@ -17,6 +17,7 @@ import com.gaozhd.studydemo.androidbase.rxjava.RxJavaActivity;
 import com.gaozhd.studydemo.androidbase.widget.autotextview.AutoTextViewActivity;
 import com.gaozhd.studydemo.androidbase.widget.dragview.DragActivity;
 import com.gaozhd.studydemo.androidbase.widget.loadingball.LoadingBallActivity;
+import com.gaozhd.studydemo.androidbase.widget.passwordedit.PasswordEditActivity;
 import com.gaozhd.studydemo.androidbase.widget.slideview.SlideViewActivity;
 import com.gaozhd.studydemo.androidbase.widget.studyview.StudyViewActivity;
 import com.gaozhd.studydemo.androidbase.widget.testview.TestViewActivity;
@@ -48,6 +49,9 @@ public class WidgetActivity extends ShowListActivity {
                 break;
             case 5:
                 intent.setClass(WidgetActivity.this, DragActivity.class);
+                break;
+            case 6:
+                intent.setClass(WidgetActivity.this, PasswordEditActivity.class);
                 break;
             default:
                 break;

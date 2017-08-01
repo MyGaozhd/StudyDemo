@@ -8,6 +8,7 @@ import com.gaozhd.studydemo.androidbase.AndroidBaseActivity;
 import com.gaozhd.studydemo.androidup.AndroidUpActivity;
 import com.gaozhd.studydemo.designpattern.DesignPatternActivity;
 import com.gaozhd.studydemo.javabase.JavaBaseActivity;
+import com.gaozhd.studydemo.suanfa.SuanfaBaseActivity;
 
 public class MainActivity extends ShowListActivity {
 
@@ -53,6 +54,9 @@ public class MainActivity extends ShowListActivity {
                 break;
             case 10:
                 intent.setClass(MainActivity.this, AndroidUpActivity.class);
+                break;
+            case 11:
+                intent.setClass(MainActivity.this, SuanfaBaseActivity.class);
                 break;
             default:
                 break;

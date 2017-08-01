@@ -8,6 +8,9 @@ import com.gaozhd.studydemo.activity.MainActivity;
 import com.gaozhd.studydemo.activity.ShowListActivity;
 import com.gaozhd.studydemo.androidbase.AndroidBaseActivity;
 import com.gaozhd.studydemo.androidup.chajianhua.ChajianhuaActivity;
+import com.gaozhd.studydemo.androidup.dip.InjectActivity;
+import com.gaozhd.studydemo.androidup.kotlin.KotlinActivity;
+import com.gaozhd.studydemo.androidup.leakheap.LeakHeapActivity;
 import com.gaozhd.studydemo.androidup.mpandroidchart.AndroidChartActivity;
 import com.gaozhd.studydemo.androidup.process.ProgressActivity;
 import com.gaozhd.studydemo.androidup.weixinhongbao.WeixinHongbaoActivity;
@@ -42,6 +45,15 @@ public class AndroidUpActivity extends ShowListActivity {
                 break;
             case 4:
                 intent.setClass(AndroidUpActivity.this, ChajianhuaActivity.class);
+                break;
+            case 5:
+                intent.setClass(AndroidUpActivity.this, KotlinActivity.class);
+                break;
+            case 6:
+                intent.setClass(AndroidUpActivity.this, LeakHeapActivity.class);
+                break;
+            case 7:
+                intent.setClass(AndroidUpActivity.this, InjectActivity.class);
                 break;
         }
     }

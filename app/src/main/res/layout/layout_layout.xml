@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@android:color/darker_gray"
+              android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@mipmap/common_back_2"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:text="一次分享"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@android:color/white"
+        android:divider="@drawable/shape_divider_mid"
+        android:dividerPadding="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:showDividers="middle">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="A"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="B"/>
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#ff0000"/>
+
+    <include layout="@layout/include_ln_divider"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#ff0000"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/user_icon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/doctor_dman"/>
+
+        <TextView
+            android:id="@+id/doctor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignTop="@id/user_icon"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@id/user_icon"
+            android:gravity="bottom|left"
+            android:text="赵医生"
+            android:textColor="#212121"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/doctor_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/doctor_name"
+            android:layout_alignParentTop="true"
+            android:layout_alignTop="@id/doctor_name"
+            android:layout_marginTop="9dp"
+            android:layout_toRightOf="@id/doctor_name"
+            android:gravity="bottom|left"
+            android:paddingLeft="5dp"
+            android:text="科主任"
+            android:textColor="#757575"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/doctor_department"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/doctor_name"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/user_icon"
+            android:gravity="bottom|left"
+            android:text="赵医生"
+            android:textColor="#757575"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#ff0000"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="#ffffff">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="#ffffff">
+
+                <ImageView
+                    android:id="@+id/iv_qr_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:maxHeight="150dp"
+                    android:maxWidth="150dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/ewm"
+                    android:visibility="visible"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_qr_code"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="请让患者用微信扫一扫"
+                    android:textColor="#4a4a4a"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

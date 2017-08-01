@@ -3,6 +3,11 @@
           xmlns:tools="http://schemas.android.com/tools"
           package="com.gaozhd.studydemo">
 
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19"
+        tools:overrideLibrary="tv.danmaku.ijk.media.player_arm64"/>
+
     <!-- 网络相关 -->
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -13,11 +18,8 @@
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-
-    <uses-sdk
-        android:minSdkVersion="14"
-        android:targetSdkVersion="19"
-        tools:overrideLibrary="tv.danmaku.ijk.media.player_arm64"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:name=".GlobalInfoApplication"
@@ -26,9 +28,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity
-            android:name="com.gaozhd.studydemo.activity.MainActivity"
+            android:name=".activity.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar">
             <intent-filter>
@@ -38,40 +39,40 @@
                 <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
             </intent-filter>
         </activity>
-
         <activity
-            android:name="com.gaozhd.studydemo.activity.TestActivity"
+            android:name=".activity.TestActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Light.NoTitleBar">
-            <!--<intent-filter>-->
-            <!--<action android:name="android.intent.action.MAIN"/>-->
 
-            <!--<category android:name="android.intent.category.LAUNCHER"/>-->
-            <!--<category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>-->
-            <!--</intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN"/> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            <!-- <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/> -->
+            <!-- </intent-filter> -->
         </activity>
+        <activity android:name=".activity.Activity0"/>
+        <activity android:name=".activity.Activity0_item1"/>
+        <activity android:name=".activity.Activity1"/>
+        <activity android:name=".activity.Activity1_item1"/>
+        <activity android:name=".activity.Activity1_item2"/>
+        <activity android:name=".activity.Activity2"/>
+        <activity android:name=".activity.Activity3"/>
+        <activity android:name=".activity.Activity4"/>
+        <activity android:name=".activity.Activity5"/>
 
-        <activity android:name="com.gaozhd.studydemo.activity.Activity0"/>
-        <activity android:name="com.gaozhd.studydemo.activity.Activity0_item1"/>
-        <activity android:name="com.gaozhd.studydemo.activity.Activity1"/>
-        <activity android:name="com.gaozhd.studydemo.activity.Activity1_item1"/>
-        <activity android:name="com.gaozhd.studydemo.activity.Activity1_item2"/>
-        <activity android:name="com.gaozhd.studydemo.activity.Activity2"/>
-        <activity android:name="com.gaozhd.studydemo.activity.Activity3"/>
-        <activity android:name="com.gaozhd.studydemo.activity.Activity4"/>
-        <activity android:name="com.gaozhd.studydemo.activity.Activity5"/>
-
-        <!--设计模式-->
+        <!-- 设计模式 -->
         <activity android:name=".designpattern.DesignPatternActivity"/>
         <activity android:name=".designpattern.observer.ObserverActivity"/>
         <activity android:name=".designpattern.proxy.ProxyActivity"/>
         <activity android:name=".designpattern.decorator.DecoratorActivity"/>
         <activity android:name=".designpattern.cloneable.CloneActivity"/>
-        <!--java基础-->
+        <!-- java基础 -->
         <activity android:name=".javabase.JavaBaseActivity"/>
         <activity android:name=".javabase.threadpool.ThreedPoolActivity"/>
         <activity android:name=".javabase.trycatch.ExceptionActivity"/>
-        <!--android基础-->
+        <!-- android基础 -->
         <activity android:name=".androidbase.AndroidBaseActivity"/>
         <activity android:name=".androidbase.recyclerview.RecyclerViewActivity0"/>
         <activity android:name=".androidbase.mvvm.MvvmActivity"/>
@@ -79,7 +80,8 @@
         <activity android:name=".androidbase.widget.WidgetActivity"/>
         <activity android:name=".androidbase.retrofit.RetrofitActivity"/>
         <activity android:name=".androidbase.oom.OOMActivity"/>
-        <!--标准
+        <!--
+        标准
         <activity
             android:name=".androidbase.lifecycle.activity.LifeCycleActivity1"/>
         <activity
@@ -87,12 +89,12 @@
         <activity
             android:name=".androidbase.lifecycle.activity.LifeCycleActivity3"/>
         <activity
-            android:name=".androidbase.lifecycle.activity.LifeCycleActivity4" />-->
+            android:name=".androidbase.lifecycle.activity.LifeCycleActivity4" />
+        -->
 
         <activity
             android:name=".androidbase.lifecycle.activity.LifeCycleActivity1"
-            android:launchMode="standard"></activity>
-
+            android:launchMode="standard"/>
         <activity
             android:name=".androidbase.lifecycle.activity.LifeCycleActivity2"
             android:launchMode="singleTop"/>
@@ -102,7 +104,6 @@
         <activity
             android:name=".androidbase.lifecycle.activity.LifeCycleActivity4"
             android:launchMode="singleInstance"/>
-
         <activity android:name=".androidbase.greendao.GreendaoActivity"/>
         <activity android:name=".androidbase.viewpage.ViewPageActivity"/>
         <activity android:name=".androidbase.fragment.FragmentActivity"/>
@@ -112,8 +113,9 @@
         <activity android:name=".androidbase.savestate.SaveStateActivity"/>
         <activity android:name=".androidbase.webview.WebviewLocalFirstActivity"/>
         <activity android:name=".androidbase.xmlparser.XmlParserActivity"/>
+        <activity android:name=".androidbase.layout.LayoutActivity"/>
 
-        <!--自定义控件-->
+        <!-- 自定义控件 -->
         <activity android:name=".androidbase.widget.testview.TestViewActivity"/>
         <activity android:name=".androidbase.widget.studyview.StudyViewActivity"/>
         <activity android:name=".androidbase.widget.autotextview.AutoTextViewActivity"/>
@@ -121,22 +123,26 @@
         <activity android:name=".androidbase.widget.slideview.SlideViewActivity"/>
         <activity android:name=".androidbase.widget.dragview.DragActivity"/>
 
-        <!--Android 提高-->
+        <!-- Android 提高 -->
         <activity android:name=".androidup.AndroidUpActivity"/>
         <activity android:name=".androidup.process.ProgressActivity"/>
         <activity android:name=".androidup.mpandroidchart.AndroidChartActivity"/>
         <activity android:name=".androidup.weixinhongbao.WeixinHongbaoActivity"/>
         <activity android:name=".androidup.chajianhua.ChajianhuaActivity"/>
+        <activity android:name=".androidup.kotlin.KotlinActivity"/>
+        <activity android:name=".androidup.leakheap.LeakHeapActivity"/>
+        <activity android:name=".androidup.dip.InjectActivity"/>
 
-        <!--广播注册-->
+        <!-- 算法 -->
+        <activity android:name=".suanfa.SuanfaBaseActivity"/>
+        <!-- 广播注册 -->
         <receiver android:name=".broadcast.Broadcast0"/>
         <receiver android:name=".androidbase.widget.autotextview.AutoSetTextSizeBroadcast"/>
 
-        <!--service-->
+        <!-- service -->
         <service
             android:name=".androidup.process.PersnalProgress"
             android:process=":remote"/>
-
         <service
             android:name=".androidup.weixinhongbao.HongbaoService"
             android:enabled="true"
@@ -144,11 +150,18 @@
             android:label="@string/hongbao_chajian"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
             <intent-filter>
-                <action android:name="android.accessibilityservice.AccessibilityService" />
+                <action android:name="android.accessibilityservice.AccessibilityService"/>
             </intent-filter>
+
             <meta-data
                 android:name="android.accessibilityservice"
-                android:resource="@xml/accessibility_service_config"></meta-data>
+                android:resource="@xml/accessibility_service_config"/>
         </service>
+
+        <activity android:name=".androidup.kotlin.KotlinActivity">
+        </activity>
+        <activity android:name=".androidup.kotlin.KotlinTestActivity">
+        </activity>
     </application>
+
 </manifest>

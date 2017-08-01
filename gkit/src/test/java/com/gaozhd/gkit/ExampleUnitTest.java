@@ -1,4 +1,4 @@
-package com.example.mediaplayer;
+package com.gaozhd.gkit;
 
 import org.junit.Test;
 

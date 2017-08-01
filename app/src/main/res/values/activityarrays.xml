@@ -34,6 +34,8 @@
         <item>程序崩溃自动重启</item>
         <!-- 10 android提高 -->
         <item>Android提高</item>
+        <!-- 11 算法 -->
+        <item>常用算法</item>
     </string-array>
 
     <!-- 所有的Activity -->
@@ -56,6 +58,8 @@
         <item>线程池</item>
         <!-- 1 try catch -->
         <item>try catch</item>
+        <!-- 2 四种引用类型 -->
+        <item>四种引用类型</item>
     </string-array>
 
     <!-- AndroidBase所有的Activity -->
@@ -95,6 +99,10 @@
         <item> webview访问时默认先读取本地，之后连接网络</item>
         <!-- 16 生成xml字符串 -->
         <item> 生成xml字符串</item>
+        <!-- 17 布局的技巧 -->
+        <item> 布局的技巧 </item>
+        <!-- 18 打开qq浏览器 -->
+        <item> 打开qq浏览器 </item>
     </string-array>
 
     <!-- 所有的Broadcast -->
@@ -128,6 +136,8 @@
         <item>字母导航控件</item>
         <!-- 5 防QQ拖动消息控件 -->
         <item>防QQ拖动消息控件</item>
+        <!-- 6 支付宝支付控件 -->
+        <item>防支付宝支付控件</item>
     </string-array>
 
     <!-- Android 提高 所有的Activity -->
@@ -143,6 +153,20 @@
         <item>微信红包</item>
         <!-- 4 插件化-->
         <item>插件化demo</item>
+        <!-- 5 kotlin-->
+        <item>kotlin-初探与集成</item>
+        <!-- 6 内存泄漏-->
+        <item>内训泄露</item>
+        <!-- 7 依赖注入-->
+        <item>依赖注入</item>
+    </string-array>
+
+    <!-- 所有算法相关 -->
+    <string-array name="allSuanfa">
+
+        <!-- 0  八种排序算法-->
+        <item>八种排序算法</item>
+
     </string-array>
 
 </resources>

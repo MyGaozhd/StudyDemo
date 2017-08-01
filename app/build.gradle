@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
 apply plugin: 'org.greenrobot.greendao'
+apply plugin: 'kotlin-android'//这里添加
+apply plugin: 'kotlin-android-extensions'//这里添加
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -8,10 +10,11 @@ android {
 
     defaultConfig {
         applicationId "com.gaozhd.studydemo"
-        minSdkVersion 15
-        targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -27,35 +30,36 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
-    compile project(':mediaplayer')
-    //recyclerview引用
-    compile 'com.android.support:recyclerview-v7:23.2.1'
-    //rxjava引用
-    compile 'io.reactivex:rxandroid:1.2.1'
-    compile 'io.reactivex:rxjava:1.1.6'
-    //butterknife引用
-    compile 'com.jakewharton:butterknife:8.1.0'
-    apt 'com.jakewharton:butterknife-compiler:8.1.0'
-    //greendao引用
+    compile project(':gkit')
+    compile files('src/main/libs/ksoap2-android-assembly-3.0.0-jar-with-dependencies.jar')
+//    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"   //主要是这两个依赖
+//    compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"    //主要是这两个依赖
+//    compile 'com.android.support:recyclerview-v7:23.2.1'
+//    compile 'io.reactivex:rxandroid:1.2.1'
+//    compile 'io.reactivex:rxjava:1.1.6'
+//    compile 'com.jakewharton:butterknife:8.1.0'
+    //    compile 'com.google.code.gson:gson:2.7'
+//    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+//    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+//    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+//    compile 'com.squareup.okhttp3:okhttp:3.3.1'
+//    compile 'com.squareup.okhttp3:logging-interceptor:3.3.1'
+//    compile 'com.github.PhilJay:MPAndroidChart:v3.0.1'
+//    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+//    testCompile 'junit:junit:4.12'
+//    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    //    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
+//    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    compile 'com.android.support:multidex:1.0.0'
     compile 'org.greenrobot:greendao:3.1.1'
     compile 'net.zetetic:android-database-sqlcipher:3.5.1'
-    //retrofit引用
-    compile 'com.google.code.gson:gson:2.7'
-    compile 'com.squareup.retrofit2:retrofit:2.1.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
-    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
-    compile 'com.squareup.okhttp3:okhttp:3.3.1'
-    compile 'com.squareup.okhttp3:logging-interceptor:3.3.1'
-    //leakcanary 内存泄漏检测
-    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
-    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
-    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
-    //MPAndroidChart
-    compile 'com.github.PhilJay:MPAndroidChart:v3.0.1'
-    compile files('src/main/libs/ksoap2-android-assembly-3.0.0-jar-with-dependencies.jar')
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    apt 'com.jakewharton:butterknife-compiler:8.1.0'
 }
-
+repositories {
+    //修改成国内阿里云的maven地址，否则某些地方下载不下来
+//    maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+}
 /**
  * GreenDao配置
  * schemaVersion 当前数据库结构的版本。结构版本变化时在OpenHelpers中被使用到。当你改变实体或者数据的结构时，这个值应该增加。

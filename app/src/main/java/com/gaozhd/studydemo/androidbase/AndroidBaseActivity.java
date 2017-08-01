@@ -1,6 +1,7 @@
 package com.gaozhd.studydemo.androidbase;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.view.View;
 
 import com.gaozhd.studydemo.R;
@@ -8,6 +9,7 @@ import com.gaozhd.studydemo.activity.ShowListActivity;
 import com.gaozhd.studydemo.androidbase.animation.AnimationActivity;
 import com.gaozhd.studydemo.androidbase.fragment.FragmentActivity;
 import com.gaozhd.studydemo.androidbase.greendao.GreendaoActivity;
+import com.gaozhd.studydemo.androidbase.layout.LayoutActivity;
 import com.gaozhd.studydemo.androidbase.lifecycle.activity.LifeCycleActivity1;
 import com.gaozhd.studydemo.androidbase.mvvm.MvvmActivity;
 import com.gaozhd.studydemo.androidbase.oom.OOMActivity;
@@ -81,6 +83,15 @@ public class AndroidBaseActivity extends ShowListActivity {
                 break;
             case 16:
                 intent.setClass(AndroidBaseActivity.this, XmlParserActivity.class);
+                break;
+            case 17:
+                intent.setClass(AndroidBaseActivity.this, LayoutActivity.class);
+                break;
+            case 18:
+                intent.setClassName("com.tencent.mtt", "com.tencent.mtt.MainActivity");
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.addCategory(Intent.CATEGORY_DEFAULT);
+                intent.setData(Uri.parse("https://www.baidu.com/"));
                 break;
             default:
                 break;
