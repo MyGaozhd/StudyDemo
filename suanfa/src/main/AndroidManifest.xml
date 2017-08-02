@@ -1,0 +1,9 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.gaozhd.suanfa">
+
+    <application>
+        <activity android:name=".views.activity.SuanfaListActivity"/>
+        <activity android:name=".views.activity.StackListActivity"/>
+    </application>
+
+</manifest>

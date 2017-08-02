@@ -11,32 +11,46 @@
 
     <!-- 所有的Activity -->
     <string-array name="allActivity">
-
-        <!-- 0 Broadcast -->
-        <item>Broadcast Reseiver</item>
-        <!-- 1 切换皮肤 -->
-        <item>切换皮肤</item>
-        <!-- 2 四秒内不能重复提示信息 -->
-        <item>四秒内不能重复提示信息 (Toast)</item>
-        <!-- 3 日期其选择控件的样式 -->
-        <item>日期其选择控件的样式</item>
-        <!-- 4 资源名称获得ID -->
-        <item>资源名称获得ID</item>
-        <!-- 5 固定行列的ListView -->
-        <item>固定行列的ListView</item>
-        <!-- 6 设计模式 -->
+        <!-- 0 设计模式 -->
         <item>常用设计模式</item>
-        <!-- 7 java基础 -->
+        <!-- 1 java基础 -->
         <item>Java基础</item>
-        <!-- 8 android基础 -->
+        <!-- 2 android基础 -->
         <item>Android基础</item>
-        <!-- 9 程序崩溃自动重启 -->
-        <item>程序崩溃自动重启</item>
-        <!-- 10 android提高 -->
+        <!-- 3 android提高 -->
         <item>Android提高</item>
-        <!-- 11 算法 -->
+        <!-- 4 算法 -->
         <item>常用算法</item>
     </string-array>
+
+    <!--&lt;!&ndash; 所有的Activity &ndash;&gt;-->
+    <!--<string-array name="allActivity">-->
+
+        <!--&lt;!&ndash; 0 Broadcast &ndash;&gt;-->
+        <!--<item>Broadcast Reseiver</item>-->
+        <!--&lt;!&ndash; 1 切换皮肤 &ndash;&gt;-->
+        <!--<item>切换皮肤</item>-->
+        <!--&lt;!&ndash; 2 四秒内不能重复提示信息 &ndash;&gt;-->
+        <!--<item>四秒内不能重复提示信息 (Toast)</item>-->
+        <!--&lt;!&ndash; 3 日期其选择控件的样式 &ndash;&gt;-->
+        <!--<item>日期其选择控件的样式</item>-->
+        <!--&lt;!&ndash; 4 资源名称获得ID &ndash;&gt;-->
+        <!--<item>资源名称获得ID</item>-->
+        <!--&lt;!&ndash; 5 固定行列的ListView &ndash;&gt;-->
+        <!--<item>固定行列的ListView</item>-->
+        <!--&lt;!&ndash; 6 设计模式 &ndash;&gt;-->
+        <!--<item>常用设计模式</item>-->
+        <!--&lt;!&ndash; 7 java基础 &ndash;&gt;-->
+        <!--<item>Java基础</item>-->
+        <!--&lt;!&ndash; 8 android基础 &ndash;&gt;-->
+        <!--<item>Android基础</item>-->
+        <!--&lt;!&ndash; 9 程序崩溃自动重启 &ndash;&gt;-->
+        <!--<item>程序崩溃自动重启</item>-->
+        <!--&lt;!&ndash; 10 android提高 &ndash;&gt;-->
+        <!--<item>Android提高</item>-->
+        <!--&lt;!&ndash; 11 算法 &ndash;&gt;-->
+        <!--<item>常用算法</item>-->
+    <!--</string-array>-->
 
     <!-- 所有的Activity -->
     <string-array name="allDesign">
@@ -103,6 +117,19 @@
         <item> 布局的技巧 </item>
         <!-- 18 打开qq浏览器 -->
         <item> 打开qq浏览器 </item>
+        <!-- 19 Broadcast -->
+        <item>Broadcast Reseiver</item>
+        <!-- 20 切换皮肤 -->
+        <item>切换皮肤</item>
+        <!-- 21 四秒内不能重复提示信息 -->
+        <item>四秒内不能重复提示信息 (Toast)</item>
+        <!-- 22 日期其选择控件的样式 -->
+        <item>日期其选择控件的样式</item>
+        <!-- 23 资源名称获得ID -->
+        <item>资源名称获得ID</item>
+        <!-- 24 固定行列的ListView -->
+        <item>固定行列的ListView</item>
+
     </string-array>
 
     <!-- 所有的Broadcast -->

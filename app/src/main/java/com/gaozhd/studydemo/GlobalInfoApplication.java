@@ -5,6 +5,7 @@ import android.app.Application;
 import android.content.SharedPreferences;
 import android.support.multidex.MultiDexApplication;
 
+import com.gaozhd.gkit.GApplication;
 import com.gaozhd.studydemo.androidbase.crash.RebootThreadExceptionHandler;
 import com.gaozhd.studydemo.androidbase.greendao.DataBaseHelper;
 import com.gaozhd.studydemo.utils.SystemUtil;
@@ -19,7 +20,7 @@ import com.squareup.leakcanary.LeakCanary;
  * <p/>
  * ${tags}
  */
-public class GlobalInfoApplication extends MultiDexApplication {
+public class GlobalInfoApplication extends GApplication {
 
     private static GlobalInfoApplication appInstance;
 

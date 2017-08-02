@@ -5,6 +5,13 @@ import android.net.Uri;
 import android.view.View;
 
 import com.gaozhd.studydemo.R;
+import com.gaozhd.studydemo.activity.Activity0;
+import com.gaozhd.studydemo.activity.Activity1;
+import com.gaozhd.studydemo.activity.Activity2;
+import com.gaozhd.studydemo.activity.Activity3;
+import com.gaozhd.studydemo.activity.Activity4;
+import com.gaozhd.studydemo.activity.Activity5;
+import com.gaozhd.studydemo.activity.MainActivity;
 import com.gaozhd.studydemo.activity.ShowListActivity;
 import com.gaozhd.studydemo.androidbase.animation.AnimationActivity;
 import com.gaozhd.studydemo.androidbase.fragment.FragmentActivity;
@@ -92,6 +99,24 @@ public class AndroidBaseActivity extends ShowListActivity {
                 intent.setAction(Intent.ACTION_VIEW);
                 intent.addCategory(Intent.CATEGORY_DEFAULT);
                 intent.setData(Uri.parse("https://www.baidu.com/"));
+                break;
+            case 19:
+                intent.setClass(AndroidBaseActivity.this, Activity0.class);
+                break;
+            case 20:
+                intent.setClass(AndroidBaseActivity.this, Activity1.class);
+                break;
+            case 21:
+                intent.setClass(AndroidBaseActivity.this, Activity2.class);
+                break;
+            case 22:
+                intent.setClass(AndroidBaseActivity.this, Activity3.class);
+                break;
+            case 23:
+                intent.setClass(AndroidBaseActivity.this, Activity4.class);
+                break;
+            case 24:
+                intent.setClass(AndroidBaseActivity.this, Activity5.class);
                 break;
             default:
                 break;

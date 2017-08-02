@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 所有的Activity -->
+    <string-array name="allSuanfaActivity">
+        <!--0 排序算法-->
+        <item>排序算法</item>
+
+        <!--1 栈和队列-->
+        <item>栈和队列</item>
+    </string-array>
+
+    <string-array name="allStack">
+        <!--0 如何仅用递归函数和栈操作逆序一个栈-->
+        <item>如何仅用递归函数和栈操作逆序一个栈</item>
+    </string-array>
+</resources>
