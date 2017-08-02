@@ -1,1 +1,1 @@
-include ':app', ':mediaplayer', ':gkit'
+include ':app', ':mediaplayer', ':gkit', ':suanfa'
