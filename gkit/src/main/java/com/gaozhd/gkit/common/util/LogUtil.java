@@ -14,4 +14,8 @@ public class LogUtil {
     public static void log(Object text) {
         Log.e(TAG, text.toString());
     }
+
+    public static void logJson(Object o) {
+        Log.e(TAG, FastJsonUtils.getJsonString(o));
+    }
 }

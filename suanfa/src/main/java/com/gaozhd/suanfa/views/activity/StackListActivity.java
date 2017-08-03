@@ -7,6 +7,7 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 import com.gaozhd.gkit.views.activity.ShowListActivity;
 import com.gaozhd.suanfa.R;
 import com.gaozhd.suanfa.views.stack.Stack0;
+import com.gaozhd.suanfa.views.stack.Stack1;
 
 /**
  * @Author: Gao Zhidong <gaozhidong@tiantanhehe.com>
@@ -26,6 +27,9 @@ public class StackListActivity extends ShowListActivity {
         switch (position) {
             case 0:
                 new Stack0();
+                break;
+            case 1:
+                new Stack1();
                 break;
             default:
                 break;

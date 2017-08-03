@@ -12,5 +12,8 @@
     <string-array name="allStack">
         <!--0 如何仅用递归函数和栈操作逆序一个栈-->
         <item>如何仅用递归函数和栈操作逆序一个栈</item>
+
+        <!--1 猫狗问题-->
+        <item>猫狗问题</item>
     </string-array>
 </resources>
