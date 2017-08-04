@@ -8,6 +8,7 @@ import com.gaozhd.gkit.views.activity.ShowListActivity;
 import com.gaozhd.suanfa.R;
 import com.gaozhd.suanfa.views.stack.Stack0;
 import com.gaozhd.suanfa.views.stack.Stack1;
+import com.gaozhd.suanfa.views.stack.Stack2;
 
 /**
  * @Author: Gao Zhidong <gaozhidong@tiantanhehe.com>
@@ -30,6 +31,9 @@ public class StackListActivity extends ShowListActivity {
                 break;
             case 1:
                 new Stack1();
+                break;
+            case 2:
+                new Stack2();
                 break;
             default:
                 break;
